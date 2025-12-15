@@ -11,13 +11,13 @@ const categories = [
   },
 
   {
-    title: "משחקים ודיגיטל",
+    title: "ידע כללי (קשה)",
     clues: [
-      { value: 100, prompt: "באיזה משחק מופיע חומר בשם 'redstone' המשמש לבניית מעגלים ומכונות?", options: ["Minecraft","Fortnite","Among Us","Roblox"], correct: 0, explanation: "Redstone הוא מרכיב במיינקראפט לשימוש במכניקה ואלקטרוניקה פשוטה בתוך המשחק." },
-      { value: 200, prompt: "איזה משחק פופולרי קידם מאוד את ז'אנר ה‑'Battle Royale' בשנת 2017?", options: ["PUBG","Fortnite","Apex Legends","H1Z1"], correct: 0, explanation: "PUBG היה אחד המשחקים שביססו את הז'אנר בשוק המסחרי בשנת 2017." },
-      { value: 300, prompt: "מה משמעות המילה 'indie' בהקשר של משחקים?", options: ["משחק עצמאי","משחק ענק","משחק מקוון","כלי פיתוח"], correct: 0, explanation: "Indie מתייחס למשחק שמפותח ללא תמיכה של חברת הוצאה גדולה." },
-      { value: 400, prompt: "איזה מנוע פיתוח משחקים נפוץ תומך ב‑C# ונמצא בשימוש רחב בקרב מפתחי משחקים קטנים וגדולים?", options: ["Unity","Unreal","Godot","CryEngine"], correct: 0, explanation: "Unity משתמשת ב‑C# ונפוצה מאוד בקרב מפתחים." },
-      { value: 500, prompt: "באיזו שפה כותבים רוב הסקריפטים ב‑Roblox?", options: ["JavaScript","Lua","Python","C#"], correct: 1, explanation: "Roblox Studio משתמשת בשפת Lua לכתיבת סקריפטים." }
+      { value: 100, prompt: "כמה מדינות חברות באו\"ם?", options: ["193","195","190","200"], correct: 0, explanation: "לפי האומות המאוחדות יש 193 מדינות חברות." },
+      { value: 200, prompt: "כמה מדינות חברות באיחוד האירופי?", options: ["24","25","27","28"], correct: 2, explanation: "נכון ל־2025 יש 27 מדינות חברות באיחוד האירופי." },
+      { value: 300, prompt: "לאיזו מדינה משויך הסיומת '.tv'?", options: ["טובאלו","טוניסיה","טורקיה","טונגה"], correct: 0, explanation: ".tv הוא קוד מדינה של טובאלו." },
+      { value: 400, prompt: "מהו המספר האטומי של זהב (Au)?", options: ["79","47","26","82"], correct: 0, explanation: "המספר האטומי של זהב הוא 79." },
+      { value: 500, prompt: "כמה אותיות יש באלפבית הלטיני?", options: ["24","25","26","27"], correct: 2, explanation: "באלפבית הלטיני יש 26 אותיות." }
     ]
   },
   {
