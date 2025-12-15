@@ -210,7 +210,6 @@ function renderOptions(clue) {
       if (clickedIdx === correctIdx) {
         btn.classList.add('correct');
         createConfetti();
-        createFirework(e.clientX, e.clientY);
       } else {
         btn.classList.add('wrong');
         const correctBtn = optsEl.querySelector(`button[data-idx="${correctIdx}"]`);
@@ -250,7 +249,6 @@ function renderModalActions(clue) {
         closeModal();
         if (delta > 0) {
           createConfetti();
-          createFirework(e.clientX, e.clientY);
         }
       });
     });
@@ -386,48 +384,59 @@ renderBoard();
 renderPlayers();
 
 function createConfetti() {
-  const colors = ['#ff5c8d', '#4dd0e1', '#ffd166', '#ff8c42', '#a29bfe', '#fd79a8', '#00b894', '#e17055'];
-  const shapes = ['circle', 'square', 'triangle'];
-  for (let i = 0; i < 150; i++) {
+  const colors = ['var(--accent-1)', 'var(--accent-2)', 'var(--accent-gold)', '#ffb085', '#ffc47a'];
+  const shapes = ['circle', 'square', 'triangle', 'star'];
+
+  // burst of large confetti
+  for (let i = 0; i < 60; i++) {
     const confetti = document.createElement('div');
     confetti.className = 'confetti';
     const color = colors[Math.floor(Math.random() * colors.length)];
     const shape = shapes[Math.floor(Math.random() * shapes.length)];
+
+    // random sizing
+    const size = Math.floor(Math.random() * 12) + 8;
+    confetti.style.width = size + 'px';
+    confetti.style.height = size + 'px';
+
     if (shape === 'circle') {
       confetti.style.borderRadius = '50%';
-      confetti.style.backgroundColor = color;
+      confetti.style.background = color;
     } else if (shape === 'triangle') {
       confetti.style.width = '0';
       confetti.style.height = '0';
-      confetti.style.borderLeft = '5px solid transparent';
-      confetti.style.borderRight = '5px solid transparent';
-      confetti.style.borderBottom = '10px solid ' + color;
+      confetti.style.borderLeft = (size/2) + 'px solid transparent';
+      confetti.style.borderRight = (size/2) + 'px solid transparent';
+      confetti.style.borderBottom = size + 'px solid ' + color;
+    } else if (shape === 'star') {
+      confetti.style.background = 'radial-gradient(circle at 30% 30%, ' + color + ', transparent 60%)';
+      confetti.style.borderRadius = '10%';
+      confetti.style.transform = 'rotate(' + (Math.random()*360) + 'deg)';
     } else {
-      confetti.style.backgroundColor = color;
+      confetti.style.background = color;
     }
+
     confetti.style.left = Math.random() * 100 + 'vw';
-    confetti.style.animationDelay = Math.random() * 2 + 's';
+    confetti.style.top = (-10 - Math.random()*10) + 'vh';
     confetti.style.animationDuration = (Math.random() * 3 + 3) + 's';
-    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+    confetti.style.animationDelay = Math.random() * 0.6 + 's';
     document.body.appendChild(confetti);
-    setTimeout(() => confetti.remove(), 6000);
+    setTimeout(() => confetti.remove(), 7000 + Math.random()*3000);
+  }
+
+  // add small sparkles
+  for (let i = 0; i < 40; i++) {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.style.left = Math.random() * 100 + 'vw';
+    sparkle.style.top = Math.random() * 60 + 'vh';
+    sparkle.style.animationDelay = Math.random() * 0.6 + 's';
+    document.body.appendChild(sparkle);
+    setTimeout(() => sparkle.remove(), 1200 + Math.random()*600);
   }
 }
 
-function createFirework(x, y) {
-  const colors = ['#ff5c8d', '#4dd0e1', '#ffd166', '#ff8c42', '#a29bfe'];
-  for (let i = 0; i < 20; i++) {
-    const firework = document.createElement('div');
-    firework.className = 'firework';
-    firework.style.left = x + 'px';
-    firework.style.top = y + 'px';
-    firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    firework.style.setProperty('--dx', (Math.random() - 0.5) * 200);
-    firework.style.setProperty('--dy', (Math.random() - 0.5) * 200);
-    document.body.appendChild(firework);
-    setTimeout(() => firework.remove(), 1000);
-  }
-}
+
 
 // Trigger confetti on correct answer
 // In the modal actions, when correct, call createConfetti();
