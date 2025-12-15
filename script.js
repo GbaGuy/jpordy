@@ -1,44 +1,55 @@
 const categories = [
   {
-    title: "מוזיקה ובידור",
+    title: "מוזיקה",
     clues: [
-      { value: 100, prompt: "באיזו שנה יצא הסינגל 'Drivers License' של Olivia Rodrigo?", options: ["2018","2019","2020","2021"], correct: 3, explanation: "'Drivers License' יצא בשנת 2021 והפך ללהיט עולמי." },
-      { value: 200, prompt: "איזו זמרת הוציאה את אלבום הבכורה 'When We All Fall Asleep, Where Do We Go?'?", options: ["Billie Eilish","Ariana Grande","Dua Lipa","Lana Del Rey"], correct: 0, explanation: "Billie Eilish הוציאה את האלבום הזה והייתה להצלחה מסחררת." },
-      { value: 300, prompt: "אילו שירות סטרימינג מפיק את הסדרה 'Stranger Things'?", options: ["Netflix","HBO","Amazon Prime","Hulu"], correct: 0, explanation: "'Stranger Things' היא סדרה מקורית של Netflix." },
-      { value: 400, prompt: "איזו שיטה נפוצה להפוך שיר לויראלי בפלטפורמות כמו TikTok?", options: ["שחרור סינגל","אתגר ריקוד","מיני-אלבום","מופע חי"], correct: 1, explanation: "אתגרי ריקוד וקיצורי וידאו תורמים להפצת שירים במהירות." },
-      { value: 500, prompt: "איזו מגמה מוזיקלית עמדה במרכזם של אתגרים ריקודיים ברשת בשנים האחרונות?", options: ["דאנס-פופ וטיקטוק-צ'אלנג'ים","ג'אז קלאסי","מוזיקת עולם","אופרות"], correct: 0, explanation: "אתגרים ברשת ושירים קצרים פופולריים במיוחד בפלטפורמות כמו TikTok." }
+      { value: 100, prompt: "באיזו שנה שוחרר הסינגל 'Blinding Lights' של The Weeknd?", options: ["2017","2018","2019","2020"], correct: 2, explanation: "'Blinding Lights' שוחרר ב־2019 והיה להיט עולמי שמחזיק שיאי הייעוד בטבלאות." },
+      { value: 200, prompt: "מהו המושג 'hook' במוזיקה?", options: ["קטע שחוזר במנגינה שמטרתו להיזכר בה","סוג של תו מוזיקלי","מכשיר נגינה","תאוריית מוזיקה"], correct: 0, explanation: "'Hook' הוא חלק שגורם לשיר להידבק בזיכרון המאזין, לרוב פזמון או ריפיטיטיבי מטען." },
+      { value: 300, prompt: "איזה אלבום של בילי אייליש זכה בפרס אלבום השנה בגרמי?", options: ["When We All Fall Asleep Where Do We Go?","Happier Than Ever","Don't Smile at Me","Ocean Eyes"], correct: 0, explanation: "'When We All Fall Asleep, Where Do We Go?' זכה במספר פרסי גראמי, כולל אלבום השנה." },
+      { value: 400, prompt: "מי נחשב למייסד סגנון המוזיקה ה'רוק אנד רול' ומהכינוי שלו נובע 'מלך הרוק'?", options: ["אלביס פרסלי","בוב דילן","צ'אק ברי","ליטל ריצ'רד"], correct: 2, explanation: "צ'אק ברי נחשב לאחד מאבות הרוק אנד רול בגלל השפעתו על הגיטרה והסגנון; אלביס כונה 'מלך הרוק' מסיבות מסחריות ותרבותיות." },
+      { value: 500, prompt: "מהו 'circle of fifths' ומה השימוש שלו בעיבוד מוזיקלי?", options: ["תרשים המציג יחסי מידות וטונים לשימוש בהרמוניה ומודולציות","סוג של שולחן הקשב","טכניקה להקלטת שירה","מכשיר מוזיקלי"], correct: 0, explanation: "'Circle of fifths' מסייע להבין תנועות בין מקומות טונליים, קונספט חשוב בהרמוניה ומודולציות." }
     ]
   },
   {
     title: "אפליקציות ורשתות חברתיות",
     clues: [
-      { value: 100, prompt: "איזו חברה רכשה את Instagram?", options: ["Google","Facebook","Microsoft","Apple"], correct: 1, explanation: "Facebook (כיום Meta) רכשה את Instagram בשנת 2012." },
-      { value: 200, prompt: "מה משמעות הקיצור 'DM' ברשתות חברתיות?", options: ["Direct Message","Daily Message","Digital Media","Data Manager"], correct: 0, explanation: "DM = Direct Message, הודעה פרטית בין משתמשים." },
-      { value: 300, prompt: "מה הייתה ההגבלה המקורית במספר התווים לציוץ בטוויטר?", options: ["140","280","160","100"], correct: 0, explanation: "ההגבלה המקורית הייתה 140 תווים." },
-      { value: 400, prompt: "באיזו שנה אוחדה TikTok עם Musical.ly (המהדורה הבינלאומית של TikTok) וביססה את מעמדה העולמי?", options: ["2016","2017","2018","2019"], correct: 2, explanation: "המיזוג התרחש ב-2018." },
-      { value: 500, prompt: "מי היה אחד ממייסדי Twitter?", options: ["Jack Dorsey","Elon Musk","Mark Zuckerberg","Jeff Bezos"], correct: 0, explanation: "Jack Dorsey הוא אחד ממייסדי Twitter." }
+      { value: 100, prompt: "באיזו שנה רכשה Facebook את Instagram?", options: ["2010","2012","2014","2016"], correct: 1, explanation: "Facebook רכשה את Instagram בשנת 2012." },
+      { value: 200, prompt: "איזו טכנולוגיה מרכזית מאפשרת שידור חי של וידאו ברשתות חברתיות?", options: ["RTMP (Real-Time Messaging Protocol)","FTP","SMTP","HTTP/2"], correct: 0, explanation: "RTMP שימש לאורך זמן לשידורים חיים והזרמות וידאו בזמן אמת לפני שחל שינוי ל-HLS/HTTP-based solutions." },
+      { value: 300, prompt: "איזו רשת חברתית הושקה תחילה כפלטפורמה למעקב אחר מיקרו-בלוגינג (ציוצים)?", options: ["Twitter","Instagram","Facebook","Snapchat"], correct: 0, explanation: "Twitter נוצרה כפלטפורמת מיקרו-בלוגינג המבוססת על ציוצים קצרים." },
+      { value: 400, prompt: "מהו המונח 'algorithmic feed' וכיצד הוא שינה את חוויית הצפייה ברשתות?", options: ["סדר הצגתו של התוכן לפי המלצות אלגוריתמיות במקום כרונולוגיה","פורמט פרסום בתשלום","כלי עריכת תמונות","מערכת ניהול קבצים"], correct: 0, explanation: "Algorithmic feeds מסדרים תוכן לפי רלוונטיות ועניין צפוי למשתמש ולא רק לפי זמן פרסום." },
+      { value: 500, prompt: "מהי תקנת GDPR בקצרה ומדוע היא חשובה לפלטפורמות חברתיות?", options: ["רגולציה להגנת נתונים פרטיים באיחוד האירופי המחייבת שקיפות וסכמות הסכמה","תקן אבטחה פנימי","מנגנון תשלום" ,"פורמט וידאו"], correct: 0, explanation: "GDPR הוא חוק הגנת נתונים שמחייב מדיניות פרטיות ושמירת זכויות הנתונים באיחוד האירופי." }
     ]
   },
   {
     title: "משחקים ודיגיטל",
     clues: [
-      { value: 100, prompt: "באיזה משחק מופיע חומר בשם 'redstone' המשמש לבניית מעגלים ומכונות?", options: ["Minecraft","Fortnite","Among Us","Roblox"], correct: 0, explanation: "Redstone הוא מרכיב במיינקראפט לשימוש במכניקה ואלקטרוניקה פשוטה בתוך המשחק." },
-      { value: 200, prompt: "איזה משחק פופולרי קידם מאוד את ז'אנר ה‑'Battle Royale' בשנת 2017?", options: ["PUBG","Fortnite","Apex Legends","H1Z1"], correct: 0, explanation: "PUBG היה אחד המשחקים שביססו את הז'אנר בשוק המסחרי בשנת 2017." },
-      { value: 300, prompt: "מה משמעות המילה 'indie' בהקשר של משחקים?", options: ["משחק עצמאי","משחק ענק","משחק מקוון","כלי פיתוח"], correct: 0, explanation: "Indie מתייחס למשחק שמפותח ללא תמיכה של חברת הוצאה גדולה." },
-      { value: 400, prompt: "איזה מנוע פיתוח משחקים נפוץ תומך ב‑C# ונמצא בשימוש רחב בקרב מפתחי משחקים קטנים וגדולים?", options: ["Unity","Unreal","Godot","CryEngine"], correct: 0, explanation: "Unity משתמשת ב‑C# ונפוצה מאוד בקרב מפתחים." },
-      { value: 500, prompt: "באיזו שפה כותבים רוב הסקריפטים ב‑Roblox?", options: ["JavaScript","Lua","Python","C#"], correct: 1, explanation: "Roblox Studio משתמשת בשפת Lua לכתיבת סקריפטים." }
+      { value: 100, prompt: "באיזה שנה יצא המשחק 'Minecraft' בגרסת היציאה הרשמית?", options: ["2009","2011","2013","2015"], correct: 1, explanation: "גרסת היציאה הרשמית של Minecraft יצאה ב-2011." },
+      { value: 200, prompt: "איזה משחק השפיע משמעותית על התפשטות ז'אנר ה‑Battle Royale בשוק העולמי בשנת 2017?", options: ["PUBG","Fortnite","Apex Legends","CS:GO"], correct: 0, explanation: "PUBG היה גורם מרכזי ב־2017 להצלחת ז'אנר ה‑Battle Royale." },
+      { value: 300, prompt: "מהו מנוע המשחקים 'Unreal Engine' ומאיזו חברה הוא פותח?", options: ["Epic Games","Unity Technologies","Valve","Crytek"], correct: 0, explanation: "Unreal Engine פותח על ידי Epic Games ומהווה מנוע מתקדם לפיתוח משחקים ותוכן אינטראקטיבי." },
+      { value: 400, prompt: "איזו שפה נפוצה בפיתוח משחקים חוצי פלטפורמות עם Unity?", options: ["C#","C++","JavaScript","Python"], correct: 0, explanation: "Unity משתמשת ב‑C# כבסיס לכתיבת סקריפטים ופיתוח משחקים." },
+      { value: 500, prompt: "מהו מושג 'procedural generation' וכיצד הוא משמש במשחקים?", options: ["יצירת תוכן באופן אלגוריתמי דינמי במקום עיצוב ידני","שיטה לכוונון גרפיקות","יכולת לשדרג חומרה","פורמט רשת"], correct: 0, explanation: "Procedural generation מייצר עולמות, מפות ותוכן באופן אלגוריתמי לחיסכון בזמן פיתוח ולהגדלת גיוון." }
     ]
   },
   {
     title: "מימס (ממים)",
     clues: [
-      { value: 100, prompt: "איזו גזע כלבים קשור למם המפורסם 'Doge'?", options: ["שיבה אינו (Shiba Inu)","לברדור","פאג","בולדוג"], correct: 0, explanation: "Doge מבוסס על כלב מסוג Shiba Inu והפך למם פופולרי." },
-      { value: 200, prompt: "מהו 'Rickroll' בדרך כלל?", options: ["שיר לימודי","קישור שמוביל לשיר של Rick Astley","אתגר ריקוד","בדיחה על סרט"], correct: 1, explanation: "Rickroll הוא טריק שבו שולחים קישור שמוביל לשיר 'Never Gonna Give You Up' של Rick Astley במקום לתוכן המצופה." },
-      { value: 300, prompt: "איך נקרא המם שבו גבר מביט באישה אחרת בזמן שבן זוגתו כועסת?", options: ["Distracted Boyfriend","Two Buttons","Hide the Pain Harold","Success Kid"], correct: 0, explanation: "ה-'Distracted Boyfriend' הפך למם עולמי שמייצג הסחות דעת ורמאות." },
-      { value: 400, prompt: "מי יצר את דמות המם 'Pepe the Frog'?", options: ["Matt Furie","Richard Dawkins","András Arató","KC Green"], correct: 0, explanation: "Pepe נוצר על ידי המאייר Matt Furie בסדרת הקומיקס 'Boys Club'." },
-      { value: 500, prompt: "מהו השם האמיתי של האדם שהתפרסם כמם 'Hide the Pain Harold'?", options: ["András Arató","Rick Astley","Success Kid","Gabe the Dog"], correct: 0, explanation: "האדם בתמונה הוא András Arató, שהפך לסמל של המם 'Hide the Pain Harold'." }
+      { value: 100, prompt: "באיזו פלטפורמה צמח המם 'Doge' לקראת הפופולריות שלו?", options: ["Reddit","Facebook","Instagram","TikTok"], correct: 0, explanation: "Doge הפך לויראלי ברשתות כמו Reddit בתחילת שנות ה־2010." },
+      { value: 200, prompt: "מה המקור של ה'Rickroll' ומה מטרתו הבסיסית?", options: ["סרטון מוזיקלי שנשלח כהפתעה","מעין קישור מתעתע שמוביל ל'Never Gonna Give You Up'","פרסומת ישנה","סיפור מדע בדיוני"], correct: 1, explanation: "Rickroll הוא מתיחה שמטרתה להטעות משתמשים להקליק קישור שמוביל לשיר של Rick Astley." },
+      { value: 300, prompt: "מי יצר את מם 'Pepe the Frog' ובאיזו סדרת קומיקס הופיע לראשונה?", options: ["Matt Furie - 'Boys Club'","Richard Dawkins - 'The Selfish Gene'","KC Green - 'Gunshow'","András Arató - 'Old Photos'"], correct: 0, explanation: "Pepe נוצר על ידי Matt Furie והופיע בסדרת הקומיקס 'Boys Club'." },
+      { value: 400, prompt: "מהו 'image macro' וכדאי לציין בתשובה מדוע הוא אפקטיבי כמם?", options: ["תמונה עם טקסט עליון ותחתון שמתקשר באופן קומי","שיר קצר","וידאו בפורמט 4:3","יישום גרפי"], correct: 0, explanation: "Image macro משלב תמונה וטקסט ליצירת מסר קצר ומשמעותי שקל לשתף ולהבין." },
+      { value: 500, prompt: "איזו סיבה תרמה להפיכתו של 'Distracted Boyfriend' למם גלובלי לפי חוקרי תרבות אינטרנט?", options: ["הנגישות החזותית והאפשרות לקרוא אותו כמשל למצבים חברתיים שונים","הקשר פוליטי ישיר","חיבור לשיר פופולריאני","שימוש בפורמט טקסטואלי בלבד"], correct: 0, explanation: "העוצמה הויזואלית והניראות ההומוריסטית של התמונה מאפשרת התאמה למצבים רבים ולכן הפכה לויראלית." }
     ]
   },
+  {
+    title: "דיסני ופיקסר",
+    clues: [
+      { value: 100, prompt: "באיזו שנה הוקמה חברת דיסני על ידי וולט דיסני ורוי דיסני?", options: ["1923","1930","1940","1955"], correct: 0, explanation: "החברה נוסדה בשנת 1923 ע"י וולט ורוי דיסני." },
+      { value: 200, prompt: "איזו טכניקה אנימציה חדשנית מיוחסת לפיקסר בסרט 'Toy Story'?", options: ["אנימציה ממוחשבת תלת־ממדית מלאה","צבעי מים מסורתיים","טכניקת סטופ־מושן","רישום ידני בלבד"], correct: 0, explanation: "'Toy Story' היה אחד מהסרטים הראשונים שהציגו אנימציה ממוחשבת תלת־ממדית באורך מלא." },
+      { value: 300, prompt: "מי היה הבמאי הראשי של 'Up' שזכה לשבחי ביקורת רבים?", options: ["Pete Docter","Brad Bird","John Lasseter","Andrew Stanton"], correct: 0, explanation: "Pete Docter ביים את 'Up' ונחשב לבמאי מוביל בפיקסר." },
+      { value: 400, prompt: "איזה סרט של פיקסר היה מועמד לפרס אוסקר לסרט הטוב ביותר?", options: ["Up","Toy Story 3","Finding Nemo","Wall-E"], correct: 1, explanation: "'Toy Story 3' ו-'Up' היו מועמדים; Toy Story 3 היה מועמד ל-Best Picture גם כן." },
+      { value: 500, prompt: "מהו התהליך של 'rendering' באנימציה ממוחשבת?", options: ["המרת מודל ונתוני סצנה לתמונה או רצף תמונות סופי באמצעות חישובים גרפיים","שיטת ציור ידנית","קונספט לפיתוח דמויות","טכניקת סאונד"], correct: 0, explanation: "Rendering הוא חישוב ההשפעות הגרפיות ליצירת התמונה הסופית מהדאטה התלת־ממדי." }
+    ]
+  }
+];
 
   {
     title: "דיסני ופיקסר",
