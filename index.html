@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,31 +13,30 @@
   <div class="page">
     <header class="hero">
       <div>
-        <p class="eyebrow">Playable on GitHub Pages</p>
+        <p class="eyebrow">ניתן לשחק ב-GitHub Pages</p>
         <h1>JPordy</h1>
-        <p class="lede">Quick Jeopardy-style board with players, scores, revealable questions, and answers.</p>
+        <p class="lede">לוח משחק מהיר בסגנון ג'פרדי עם שחקנים, ניקוד, שאלות ניתנות לחשיפה ותשובות.</p>
         <div class="cta-row">
-          <button id="reset-game" class="ghost">Reset game</button>
-          <a class="link" href="https://docs.github.com/en/pages" target="_blank" rel="noreferrer">How to publish on GitHub Pages</a>
+          <button id="reset-game" class="ghost">איפוס משחק</button>
         </div>
       </div>
       <div class="hero-card">
-        <p class="muted">Setup</p>
+        <p class="muted">הגדרה</p>
         <ol>
-          <li>Add players below</li>
-          <li>Click a value to reveal the prompt</li>
-          <li>Mark who got it right or wrong</li>
-          <li>Watch the scores update</li>
+          <li>הוסף שחקנים למטה</li>
+          <li>לחץ על ערך כדי לחשוף את השאלה</li>
+          <li>סמן מי צדק או טעה</li>
+          <li>צפה בעדכון הניקוד</li>
         </ol>
       </div>
     </header>
 
     <section class="controls">
       <div class="stack">
-        <label for="player-name">Add player</label>
+        <label for="player-name">הוסף שחקן</label>
         <div class="inline">
-          <input id="player-name" type="text" placeholder="Player name" aria-label="Player name" />
-          <button id="add-player">Add</button>
+          <input id="player-name" type="text" placeholder="שם שחקן" aria-label="שם שחקן" />
+          <button id="add-player">הוסף</button>
         </div>
       </div>
       <div class="players" id="players"></div>
@@ -51,18 +50,18 @@
       <div class="modal-head">
         <p id="modal-category" class="muted"></p>
         <p id="modal-value" class="pill"></p>
-        <button class="ghost" id="close-modal" aria-label="Close">×</button>
+        <button class="ghost" id="close-modal" aria-label="סגור">×</button>
       </div>
       <div class="modal-body">
         <p id="modal-question" class="question"></p>
         <div class="answer-row">
-          <button id="show-answer">Show answer</button>
+          <button id="show-answer">הצג תשובה</button>
           <p id="modal-answer" class="answer" hidden></p>
         </div>
       </div>
       <div id="modal-actions" class="modal-actions"></div>
       <div class="modal-foot">
-        <button class="ghost" id="skip-question">Skip without scoring</button>
+        <button class="ghost" id="skip-question">דלג ללא ניקוד</button>
       </div>
     </div>
   </div>

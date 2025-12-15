@@ -23,6 +23,7 @@ body {
     linear-gradient(140deg, #0f1225, #060816 60%);
   color: var(--text);
   min-height: 100vh;
+  direction: rtl;
 }
 
 .page {

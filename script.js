@@ -1,42 +1,42 @@
 const categories = [
   {
-    title: "Tech",
+    title: "טכנולוגיה",
     clues: [
-      { value: 200, prompt: "This lightweight markup language powers most README files.", answer: "Markdown" },
-      { value: 400, prompt: "A Git command that lists commits with abbreviated hashes.", answer: "git log --oneline" },
-      { value: 600, prompt: "Name of the JavaScript runtime built on Chrome's V8 engine.", answer: "Node.js" },
-      { value: 800, prompt: "CSS layout model that uses rows and columns without floats.", answer: "CSS Grid" },
-      { value: 1000, prompt: "HTTP status code for 'Unauthorized'.", answer: "401" }
+      { value: 200, prompt: "שפת סימון קלה שמניעה את רוב קבצי README.", answer: "מרקדאון" },
+      { value: 400, prompt: "פקודת Git שרשימה קומיטים עם גיבובים מקוצרים.", answer: "git log --oneline" },
+      { value: 600, prompt: "שם זמן הריצה של JavaScript הבנוי על מנוע V8 של Chrome.", answer: "Node.js" },
+      { value: 800, prompt: "מודל פריסה CSS המשתמש בשורות ועמודות ללא floats.", answer: "CSS Grid" },
+      { value: 1000, prompt: "קוד סטטוס HTTP עבור 'Unauthorized'.", answer: "401" }
     ]
   },
   {
-    title: "Science",
+    title: "מדע",
     clues: [
-      { value: 200, prompt: "The planet known for its prominent rings.", answer: "Saturn" },
-      { value: 400, prompt: "Unit used to measure electrical resistance.", answer: "Ohm" },
-      { value: 600, prompt: "Process plants use to convert light into energy.", answer: "Photosynthesis" },
-      { value: 800, prompt: "Smallest particle that still retains an element's properties.", answer: "Atom" },
-      { value: 1000, prompt: "Gas that makes up about 78% of Earth's atmosphere.", answer: "Nitrogen" }
+      { value: 200, prompt: "הכוכב הלכת הידוע בטבעותיו הבולטות.", answer: "סטורן" },
+      { value: 400, prompt: "יחידה המשמשת למדידת התנגדות חשמלית.", answer: "אוהם" },
+      { value: 600, prompt: "תהליך שצמחים משתמשים בו להמרת אור לאנרגיה.", answer: "פוטוסינתזה" },
+      { value: 800, prompt: "החלקיק הקטן ביותר שעדיין שומר על תכונותיו של יסוד.", answer: "אטום" },
+      { value: 1000, prompt: "גז המהווה כ-78% מהאטמוספירה של כדור הארץ.", answer: "חנקן" }
     ]
   },
   {
-    title: "Movies",
+    title: "סרטים",
     clues: [
-      { value: 200, prompt: "Director of 'Inception'.", answer: "Christopher Nolan" },
-      { value: 400, prompt: "The galaxy-spanning saga featuring the Force.", answer: "Star Wars" },
-      { value: 600, prompt: "Animated film with a clownfish searching for his son.", answer: "Finding Nemo" },
-      { value: 800, prompt: "Musical set in the city of angels starring Emma Stone and Ryan Gosling.", answer: "La La Land" },
-      { value: 1000, prompt: "Film where 'there is no spoon'.", answer: "The Matrix" }
+      { value: 200, prompt: "במאי של 'Inception'.", answer: "כריסטופר נולן" },
+      { value: 400, prompt: "הסאגה הגלקטית הכוללת את הכוח.", answer: "מלחמת הכוכבים" },
+      { value: 600, prompt: "סרט אנימציה עם דג קלון המחפש את בנו.", answer: "מציאת נמו" },
+      { value: 800, prompt: "מוזיקל המתרחש בעיר המלאכים בכיכובם של אמה סטון וריין גוסלינג.", answer: "לה לה לנד" },
+      { value: 1000, prompt: "סרט שבו 'אין כף'.", answer: "מטריקס" }
     ]
   },
   {
-    title: "General",
+    title: "כללי",
     clues: [
-      { value: 200, prompt: "Opposite of vertical.", answer: "Horizontal" },
-      { value: 400, prompt: "Primary color that is a mix of red and blue.", answer: "Purple" },
-      { value: 600, prompt: "Number of continents on Earth.", answer: "Seven" },
-      { value: 800, prompt: "Metal attracted by magnets.", answer: "Iron" },
-      { value: 1000, prompt: "Language spoken in Brazil.", answer: "Portuguese" }
+      { value: 200, prompt: "ההפך מאנכי.", answer: "אופקי" },
+      { value: 400, prompt: "צבע ראשי שהוא תערובת של אדום וכחול.", answer: "סגול" },
+      { value: 600, prompt: "מספר היבשות בכדור הארץ.", answer: "שבע" },
+      { value: 800, prompt: "מתכת המושכת למגנטים.", answer: "ברזל" },
+      { value: 1000, prompt: "שפה המדוברת בברזיל.", answer: "פורטוגזית" }
     ]
   }
 ];
@@ -66,7 +66,7 @@ const state = {
 function renderPlayers() {
   playersEl.innerHTML = "";
   if (!state.players.length) {
-    playersEl.innerHTML = '<p class="muted">Add players to start scoring.</p>';
+    playersEl.innerHTML = '<p class="muted">הוסף שחקנים כדי להתחיל לנקד.</p>';
     return;
   }
 
@@ -76,7 +76,7 @@ function renderPlayers() {
     card.innerHTML = `
       <div class="player-row">
         <strong>${player.name}</strong>
-        <span class="badge">${state.used.size} played</span>
+        <span class="badge">${state.used.size} שוחק</span>
       </div>
       <div class="player-row">
         <span class="score">${player.score}</span>
@@ -85,7 +85,7 @@ function renderPlayers() {
           <button class="ghost" data-delta="100" data-player="${player.id}">+100</button>
         </div>
       </div>
-      <button class="ghost" data-remove="${player.id}">Remove</button>
+      <button class="ghost" data-remove="${player.id}">הסר</button>
     `;
 
     card.querySelectorAll("button[data-delta]").forEach((btn) => {
@@ -167,7 +167,7 @@ function openClue(catIdx, clueIdx) {
 function renderModalActions(clue) {
   modalActions.innerHTML = "";
   if (!state.players.length) {
-    modalActions.innerHTML = '<p class="muted">Add players to score this question.</p>';
+    modalActions.innerHTML = '<p class="muted">הוסף שחקנים כדי לנקד שאלה זו.</p>';
     return;
   }
 
@@ -176,8 +176,8 @@ function renderModalActions(clue) {
     row.className = "player-action";
     row.innerHTML = `
       <span>${player.name}</span>
-      <button class="ghost" data-player="${player.id}" data-delta="-${clue.value}">Incorrect</button>
-      <button data-player="${player.id}" data-delta="${clue.value}">Correct</button>
+      <button class="ghost" data-player="${player.id}" data-delta="-${clue.value}">שגוי</button>
+      <button data-player="${player.id}" data-delta="${clue.value}">נכון</button>
     `;
 
     row.querySelectorAll("button").forEach((btn) => {
