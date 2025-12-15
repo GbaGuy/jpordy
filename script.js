@@ -11,13 +11,13 @@ const categories = [
   },
 
   {
-    title: "ידע כללי (קשה)",
+    title: "משחקים ודיגיטל",
     clues: [
-      { value: 100, prompt: "איזו יסוד כימי בעל המספר האטומי 92?", options: ["ברזל","פלטינום","קלציום","אורניום"], correct: 3, explanation: "האורניום הוא היסוד עם המספר האטומי 92." },
-      { value: 200, prompt: "מי ניסח את משוואות המקוול (Maxwell) לתיאור שדה החשמל והמגנטיות?", options: ["ג'יימס קלרק מקסוול","מייקל פאראדיי","ג'יימס ווטסון","אלברט איינשטיין"], correct: 0, explanation: "ג'יימס קלרק מקסוול ניסח את משוואות מקסוול שמאחדות חשמל ומגנטיות." },
-      { value: 300, prompt: "באיזו שנה נפלה האימפריה הרומית המערבית לפי המסורת ההיסטורית?", options: ["410","476","1453","330"], correct: 1, explanation: "נפילת האימפריה הרומית המערבית מיוחסת לשנת 476 לספירה." },
-      { value: 400, prompt: "מהו הערך המקורב של מספר אוילר 'e' עד שלוש ספרות אחרי הנקודה?", options: ["2.718","3.142","1.618","2.303"], correct: 0, explanation: "e ≈ 2.718 (מספר אוילר)." },
-      { value: 500, prompt: "מי פרסם את הספר 'On the Origin of Species' שמתאר את תורת האבולוציה על ידי ברירה טבעית?", options: ["Gregory Mendel","Charles Darwin","Alfred Wallace","Jean-Baptiste Lamarck"], correct: 1, explanation: "צ'ארלס דארווין פרסם את 'On the Origin of Species' ב-1859 והתווה את תורת האבולוציה על ידי ברירה טבעית." }
+      { value: 100, prompt: "באיזה משחק מופיע חומר בשם 'redstone' המשמש לבניית מעגלים ומכונות?", options: ["Minecraft","Fortnite","Among Us","Roblox"], correct: 0, explanation: "Redstone הוא מרכיב במיינקראפט לשימוש במכניקה ואלקטרוניקה פשוטה בתוך המשחק." },
+      { value: 200, prompt: "איזה משחק פופולרי קידם מאוד את ז'אנר ה‑'Battle Royale' בשנת 2017?", options: ["PUBG","Fortnite","Apex Legends","H1Z1"], correct: 0, explanation: "PUBG היה אחד המשחקים שביססו את הז'אנר בשוק המסחרי בשנת 2017." },
+      { value: 300, prompt: "מה משמעות המילה 'indie' בהקשר של משחקים?", options: ["משחק עצמאי","משחק ענק","משחק מקוון","כלי פיתוח"], correct: 0, explanation: "Indie מתייחס למשחק שמפותח ללא תמיכה של חברת הוצאה גדולה." },
+      { value: 400, prompt: "איזה מנוע פיתוח משחקים נפוץ תומך ב‑C# ונמצא בשימוש רחב בקרב מפתחי משחקים קטנים וגדולים?", options: ["Unity","Unreal","Godot","CryEngine"], correct: 0, explanation: "Unity משתמשת ב‑C# ונפוצה מאוד בקרב מפתחים." },
+      { value: 500, prompt: "באיזו שפה כותבים רוב הסקריפטים ב‑Roblox?", options: ["JavaScript","Lua","Python","C#"], correct: 1, explanation: "Roblox Studio משתמשת בשפת Lua לכתיבת סקריפטים." }
     ]
   },
   {
