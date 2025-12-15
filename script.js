@@ -1,64 +1,44 @@
 const categories = [
   {
-    title: "מוזיקה",
+    title: "מוזיקה ובידור",
     clues: [
-      { value: 100, prompt: "באיזו שנה שוחרר הסינגל 'Blinding Lights' של The Weeknd?", options: ["2017","2018","2019","2020"], correct: 2, explanation: "'Blinding Lights' שוחרר ב־2019 והיה להיט עולמי שמחזיק שיאי הייעוד בטבלאות." },
-      { value: 200, prompt: "מהו המושג 'hook' במוזיקה?", options: ["קטע שחוזר במנגינה שמטרתו להיזכר בה","סוג של תו מוזיקלי","מכשיר נגינה","תאוריית מוזיקה"], correct: 0, explanation: "'Hook' הוא חלק שגורם לשיר להידבק בזיכרון המאזין, לרוב פזמון או ריפיטיטיבי מטען." },
-      { value: 300, prompt: "איזה אלבום של בילי אייליש זכה בפרס אלבום השנה בגרמי?", options: ["When We All Fall Asleep Where Do We Go?","Happier Than Ever","Don't Smile at Me","Ocean Eyes"], correct: 0, explanation: "'When We All Fall Asleep, Where Do We Go?' זכה במספר פרסי גראמי, כולל אלבום השנה." },
-      { value: 400, prompt: "מי נחשב למייסד סגנון המוזיקה ה'רוק אנד רול' ומהכינוי שלו נובע 'מלך הרוק'?", options: ["אלביס פרסלי","בוב דילן","צ'אק ברי","ליטל ריצ'רד"], correct: 2, explanation: "צ'אק ברי נחשב לאחד מאבות הרוק אנד רול בגלל השפעתו על הגיטרה והסגנון; אלביס כונה 'מלך הרוק' מסיבות מסחריות ותרבותיות." },
-      { value: 500, prompt: "מהו 'circle of fifths' ומה השימוש שלו בעיבוד מוזיקלי?", options: ["תרשים המציג יחסי מידות וטונים לשימוש בהרמוניה ומודולציות","סוג של שולחן הקשב","טכניקה להקלטת שירה","מכשיר מוזיקלי"], correct: 0, explanation: "'Circle of fifths' מסייע להבין תנועות בין מקומות טונליים, קונספט חשוב בהרמוניה ומודולציות." }
+      { value: 100, prompt: "באיזו שנה יצא הסינגל 'Drivers License' של Olivia Rodrigo?", options: ["2018","2019","2020","2021"], correct: 3, explanation: "'Drivers License' יצא בשנת 2021 והפך ללהיט עולמי." },
+      { value: 200, prompt: "איזו זמרת הוציאה את אלבום הבכורה 'When We All Fall Asleep, Where Do We Go?'?", options: ["Billie Eilish","Ariana Grande","Dua Lipa","Lana Del Rey"], correct: 0, explanation: "Billie Eilish הוציאה את האלבום הזה והייתה להצלחה מסחררת." },
+      { value: 300, prompt: "מי מבצע את השיר 'Blinding Lights'?", options: ["The Weeknd","Bruno Mars","Justin Bieber","Post Malone"], correct: 0, explanation: "'Blinding Lights' בוצע על ידי The Weeknd." },
+      { value: 400, prompt: "מי מכונה 'מלך הפופ'?", options: ["מייקל ג'קסון","אלביס פרסלי","פרינס","מדונה"], correct: 0, explanation: "מייקל ג'קסון מוכר בכינוי 'מלך הפופ'." },
+      { value: 500, prompt: "מי הוציא את האלבום 'folklore'?", options: ["Taylor Swift","Billie Eilish","Adele","Lorde"], correct: 0, explanation: "'folklore' שוחרר על ידי Taylor Swift בשנת 2020." }
     ]
   },
+
   {
-    title: "אפליקציות ורשתות חברתיות",
+    title: "ידע כללי (קשה)",
     clues: [
-      { value: 100, prompt: "באיזו שנה רכשה Facebook את Instagram?", options: ["2010","2012","2014","2016"], correct: 1, explanation: "Facebook רכשה את Instagram בשנת 2012." },
-      { value: 200, prompt: "איזו טכנולוגיה מרכזית מאפשרת שידור חי של וידאו ברשתות חברתיות?", options: ["RTMP (Real-Time Messaging Protocol)","FTP","SMTP","HTTP/2"], correct: 0, explanation: "RTMP שימש לאורך זמן לשידורים חיים והזרמות וידאו בזמן אמת לפני שחל שינוי ל-HLS/HTTP-based solutions." },
-      { value: 300, prompt: "איזו רשת חברתית הושקה תחילה כפלטפורמה למעקב אחר מיקרו-בלוגינג (ציוצים)?", options: ["Twitter","Instagram","Facebook","Snapchat"], correct: 0, explanation: "Twitter נוצרה כפלטפורמת מיקרו-בלוגינג המבוססת על ציוצים קצרים." },
-      { value: 400, prompt: "מהו המונח 'algorithmic feed' וכיצד הוא שינה את חוויית הצפייה ברשתות?", options: ["סדר הצגתו של התוכן לפי המלצות אלגוריתמיות במקום כרונולוגיה","פורמט פרסום בתשלום","כלי עריכת תמונות","מערכת ניהול קבצים"], correct: 0, explanation: "Algorithmic feeds מסדרים תוכן לפי רלוונטיות ועניין צפוי למשתמש ולא רק לפי זמן פרסום." },
-      { value: 500, prompt: "מהי תקנת GDPR בקצרה ומדוע היא חשובה לפלטפורמות חברתיות?", options: ["רגולציה להגנת נתונים פרטיים באיחוד האירופי המחייבת שקיפות וסכמות הסכמה","תקן אבטחה פנימי","מנגנון תשלום" ,"פורמט וידאו"], correct: 0, explanation: "GDPR הוא חוק הגנת נתונים שמחייב מדיניות פרטיות ושמירת זכויות הנתונים באיחוד האירופי." }
-    ]
-  },
-  {
-    title: "משחקים ודיגיטל",
-    clues: [
-      { value: 100, prompt: "באיזה שנה יצא המשחק 'Minecraft' בגרסת היציאה הרשמית?", options: ["2009","2011","2013","2015"], correct: 1, explanation: "גרסת היציאה הרשמית של Minecraft יצאה ב-2011." },
-      { value: 200, prompt: "איזה משחק השפיע משמעותית על התפשטות ז'אנר ה‑Battle Royale בשוק העולמי בשנת 2017?", options: ["PUBG","Fortnite","Apex Legends","CS:GO"], correct: 0, explanation: "PUBG היה גורם מרכזי ב־2017 להצלחת ז'אנר ה‑Battle Royale." },
-      { value: 300, prompt: "מהו מנוע המשחקים 'Unreal Engine' ומאיזו חברה הוא פותח?", options: ["Epic Games","Unity Technologies","Valve","Crytek"], correct: 0, explanation: "Unreal Engine פותח על ידי Epic Games ומהווה מנוע מתקדם לפיתוח משחקים ותוכן אינטראקטיבי." },
-      { value: 400, prompt: "איזו שפה נפוצה בפיתוח משחקים חוצי פלטפורמות עם Unity?", options: ["C#","C++","JavaScript","Python"], correct: 0, explanation: "Unity משתמשת ב‑C# כבסיס לכתיבת סקריפטים ופיתוח משחקים." },
-      { value: 500, prompt: "מהו מושג 'procedural generation' וכיצד הוא משמש במשחקים?", options: ["יצירת תוכן באופן אלגוריתמי דינמי במקום עיצוב ידני","שיטה לכוונון גרפיקות","יכולת לשדרג חומרה","פורמט רשת"], correct: 0, explanation: "Procedural generation מייצר עולמות, מפות ותוכן באופן אלגוריתמי לחיסכון בזמן פיתוח ולהגדלת גיוון." }
+      { value: 100, prompt: "איזו יסוד כימי בעל המספר האטומי 92?", options: ["ברזל","פלטינום","קלציום","אורניום"], correct: 3, explanation: "האורניום הוא היסוד עם המספר האטומי 92." },
+      { value: 200, prompt: "מי ניסח את משוואות המקוול (Maxwell) לתיאור שדה החשמל והמגנטיות?", options: ["ג'יימס קלרק מקסוול","מייקל פאראדיי","ג'יימס ווטסון","אלברט איינשטיין"], correct: 0, explanation: "ג'יימס קלרק מקסוול ניסח את משוואות מקסוול שמאחדות חשמל ומגנטיות." },
+      { value: 300, prompt: "באיזו שנה נפלה האימפריה הרומית המערבית לפי המסורת ההיסטורית?", options: ["410","476","1453","330"], correct: 1, explanation: "נפילת האימפריה הרומית המערבית מיוחסת לשנת 476 לספירה." },
+      { value: 400, prompt: "מהו הערך המקורב של מספר אוילר 'e' עד שלוש ספרות אחרי הנקודה?", options: ["2.718","3.142","1.618","2.303"], correct: 0, explanation: "e ≈ 2.718 (מספר אוילר)." },
+      { value: 500, prompt: "מי פרסם את הספר 'On the Origin of Species' שמתאר את תורת האבולוציה על ידי ברירה טבעית?", options: ["Gregory Mendel","Charles Darwin","Alfred Wallace","Jean-Baptiste Lamarck"], correct: 1, explanation: "צ'ארלס דארווין פרסם את 'On the Origin of Species' ב-1859 והתווה את תורת האבולוציה על ידי ברירה טבעית." }
     ]
   },
   {
     title: "מימס (ממים)",
     clues: [
-      { value: 100, prompt: "באיזו פלטפורמה צמח המם 'Doge' לקראת הפופולריות שלו?", options: ["Reddit","Facebook","Instagram","TikTok"], correct: 0, explanation: "Doge הפך לויראלי ברשתות כמו Reddit בתחילת שנות ה־2010." },
-      { value: 200, prompt: "מה המקור של ה'Rickroll' ומה מטרתו הבסיסית?", options: ["סרטון מוזיקלי שנשלח כהפתעה","מעין קישור מתעתע שמוביל ל'Never Gonna Give You Up'","פרסומת ישנה","סיפור מדע בדיוני"], correct: 1, explanation: "Rickroll הוא מתיחה שמטרתה להטעות משתמשים להקליק קישור שמוביל לשיר של Rick Astley." },
-      { value: 300, prompt: "מי יצר את מם 'Pepe the Frog' ובאיזו סדרת קומיקס הופיע לראשונה?", options: ["Matt Furie - 'Boys Club'","Richard Dawkins - 'The Selfish Gene'","KC Green - 'Gunshow'","András Arató - 'Old Photos'"], correct: 0, explanation: "Pepe נוצר על ידי Matt Furie והופיע בסדרת הקומיקס 'Boys Club'." },
-      { value: 400, prompt: "מהו 'image macro' וכדאי לציין בתשובה מדוע הוא אפקטיבי כמם?", options: ["תמונה עם טקסט עליון ותחתון שמתקשר באופן קומי","שיר קצר","וידאו בפורמט 4:3","יישום גרפי"], correct: 0, explanation: "Image macro משלב תמונה וטקסט ליצירת מסר קצר ומשמעותי שקל לשתף ולהבין." },
-      { value: 500, prompt: "איזו סיבה תרמה להפיכתו של 'Distracted Boyfriend' למם גלובלי לפי חוקרי תרבות אינטרנט?", options: ["הנגישות החזותית והאפשרות לקרוא אותו כמשל למצבים חברתיים שונים","הקשר פוליטי ישיר","חיבור לשיר פופולריאני","שימוש בפורמט טקסטואלי בלבד"], correct: 0, explanation: "העוצמה הויזואלית והניראות ההומוריסטית של התמונה מאפשרת התאמה למצבים רבים ולכן הפכה לויראלית." }
+      { value: 100, prompt: "איזה גזע כלבים הוא 'Doge'?", options: ["שיבה","לברדור","פאג","בולדוג"], correct: 0, explanation: "Doge מבוסס על כלב מסוג Shiba (שיבה) והפך למם פופולרי." },
+      { value: 200, prompt: "מהו 'Rickroll' בדרך כלל?", options: ["שיר לימודי","קישור שמוביל לשיר של Rick Astley","אתגר ריקוד","בדיחה על סרט"], correct: 1, explanation: "Rickroll הוא טריק שבו שולחים קישור שמוביל לשיר 'Never Gonna Give You Up' של Rick Astley במקום לתוכן המצופה." },
+      { value: 300, prompt: "איך נקרא המם שבו גבר מביט באישה אחרת בזמן שבן זוגתו כועסת?", options: ["Distracted Boyfriend","Two Buttons","Hide the Pain Harold","Success Kid"], correct: 0, explanation: "ה-'Distracted Boyfriend' הפך למם עולמי שמייצג הסחות דעת ורמאות." },
+      { value: 400, prompt: "איזה חיה הוא Pepe?", options: ["כלב","חתול","צפרדע","זאב"], correct: 2, explanation: "Pepe הוא צפרדע — הדמות נוצרה כצפרדע על ידי המאייר Matt Furie." },
+      { value: 500, prompt: "מהו השם האמיתי של האדם שהתפרסם כמם 'Hide the Pain Harold'?", options: ["István Kovács","Péter Nagy","András Arató","Tamás Horváth"], correct: 2, explanation: "האדם בתמונה הוא András Arató, שהפך לסמל של המם 'Hide the Pain Harold'." }
     ]
   },
-  {
-    title: "דיסני ופיקסר",
-    clues: [
-      { value: 100, prompt: "באיזו שנה הוקמה חברת דיסני על ידי וולט דיסני ורוי דיסני?", options: ["1923","1930","1940","1955"], correct: 0, explanation: "החברה נוסדה בשנת 1923 ע"י וולט ורוי דיסני." },
-      { value: 200, prompt: "איזו טכניקה אנימציה חדשנית מיוחסת לפיקסר בסרט 'Toy Story'?", options: ["אנימציה ממוחשבת תלת־ממדית מלאה","צבעי מים מסורתיים","טכניקת סטופ־מושן","רישום ידני בלבד"], correct: 0, explanation: "'Toy Story' היה אחד מהסרטים הראשונים שהציגו אנימציה ממוחשבת תלת־ממדית באורך מלא." },
-      { value: 300, prompt: "מי היה הבמאי הראשי של 'Up' שזכה לשבחי ביקורת רבים?", options: ["Pete Docter","Brad Bird","John Lasseter","Andrew Stanton"], correct: 0, explanation: "Pete Docter ביים את 'Up' ונחשב לבמאי מוביל בפיקסר." },
-      { value: 400, prompt: "איזה סרט של פיקסר היה מועמד לפרס אוסקר לסרט הטוב ביותר?", options: ["Up","Toy Story 3","Finding Nemo","Wall-E"], correct: 1, explanation: "'Toy Story 3' ו-'Up' היו מועמדים; Toy Story 3 היה מועמד ל-Best Picture גם כן." },
-      { value: 500, prompt: "מהו התהליך של 'rendering' באנימציה ממוחשבת?", options: ["המרת מודל ונתוני סצנה לתמונה או רצף תמונות סופי באמצעות חישובים גרפיים","שיטת ציור ידנית","קונספט לפיתוח דמויות","טכניקת סאונד"], correct: 0, explanation: "Rendering הוא חישוב ההשפעות הגרפיות ליצירת התמונה הסופית מהדאטה התלת־ממדי." }
-    ]
-  }
-];
 
   {
     title: "דיסני ופיקסר",
     clues: [
-      { value: 100, prompt: "מי מבין הבאים הוא המייסד המוכר של חברת דיסני?", options: ["וולט דיסני","ג'ון לאסטר","פיט דוקטור","אנדרו סטנטון"], correct: 0, explanation: "וולט דיסני ייסד את החברה יחד עם אחיו רוי והפך לסמל של אנימציה קלאסית." },
-      { value: 200, prompt: "איזו חברה הפיקה את הסרט 'Toy Story' הראשון?", options: ["דיסני","פיקסר","דרימוורקס","אולפן סרטים אחר"], correct: 1, explanation: "'Toy Story' הופק על ידי Pixar והיה לסרט האנימציה הממוחשב הראשון באורך מלא של פיקסר." },
-      { value: 300, prompt: "באיזו שנה יצא הסרט 'Toy Story' המקורי?", options: ["1993","1995","1997","1999"], correct: 1, explanation: "'Toy Story' יצא ב-1995 והפך לאבן דרך באנימציה ממוחשבת." },
-      { value: 400, prompt: "מי מבין הבאים ביים את הסרט 'Up'?", options: ["פיט דוקטור","ג'ון לאסטר","אנדרו סטנטון","מאט פאלקונר"], correct: 0, explanation: "פיט דוקטור (Pete Docter) היה אחד מבימאי 'Up'." },
-      { value: 500, prompt: "איזה סרט של פיקסר היה מועמד לפרס אוסקר לסרט הטוב ביותר (Best Picture)?", options: ["Finding Nemo","Up","Toy Story 2","Monsters, Inc."], correct: 1, explanation: "'Up' היה מועמד לפרס אוסקר לסרט הטוב ביותר ונחשב להישג יוצא דופן עבור סרט אנימציה." }
+      { value: 100, prompt: "מי ביים את הסרט 'Toy Story'?", options: ["ג'ון לאסטר","פיט דוקטור","אנדרו סטנטון","וולט דיסני"], correct: 0, explanation: "ג'ון לאסטר (John Lasseter) ביים את 'Toy Story'." },
+      { value: 200, prompt: "באיזו שנה נוסדה פיקסר כחברה עצמאית?", options: ["1979","1986","1995","2000"], correct: 1, explanation: "פיקסר הוקמה כיחידה עצמאית בשנת 1986." },
+      { value: 300, prompt: "מה שמו של המנורה המפורסמת שנמצאת בסמלו של פיקסר?", options: ["Luxo Jr.","Lumi","Pixy","Luxor"], correct: 0, explanation: "המנורה 'Luxo Jr.' הופיעה בקטע הניסיוני של פיקסר והפכה לסמל החברה." },
+      { value: 400, prompt: "מי הלחין את הפסקול של 'Up'?", options: ["Michael Giacchino","Randy Newman","Hans Zimmer","John Williams"], correct: 0, explanation: "Michael Giacchino הלחין את הפסקול של 'Up'." },
+      { value: 500, prompt: "איזה סרט של פיקסר זכה בפרס אוסקר לסרט האנימציה הטוב ביותר בטקס של 2004 (שנחגג על סרטי 2003)?", options: ["Finding Nemo","The Incredibles","Monsters, Inc.","Toy Story 2"], correct: 0, explanation: "'Finding Nemo' זכה בפרס סרט האנימציה הטוב ביותר בטקס של 2004." }
     ]
   }
 ];
