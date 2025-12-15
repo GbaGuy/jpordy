@@ -1,13 +1,9 @@
 :root {
-  --ink: #0c1020;
-  --panel: rgba(12, 16, 32, 0.6);
-  --card: rgba(255, 255, 255, 0.04);
-  --accent: #ff5c8d;
-  --accent-2: #4dd0e1;
-  --text: #f8fbff;
-  --muted: #9fb4d3;
-  --border: rgba(255, 255, 255, 0.1);
-  --glow: 0 12px 50px rgba(77, 208, 225, 0.25);
+  --jeopardy-blue: #000080;
+  --jeopardy-yellow: #FFFF00;
+  --jeopardy-white: #FFFFFF;
+  --jeopardy-dark-blue: #000040;
+  --border: #FFFFFF;
 }
 
 * {
@@ -16,12 +12,9 @@
 
 body {
   margin: 0;
-  font-family: "Space Grotesk", "Segoe UI", Tahoma, sans-serif;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 92, 141, 0.15), transparent 25%),
-    radial-gradient(circle at 80% 0%, rgba(77, 208, 225, 0.2), transparent 30%),
-    radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.05), transparent 35%),
-    linear-gradient(140deg, #0f1225, #060816 60%);
-  color: var(--text);
+  font-family: Arial, sans-serif;
+  background: var(--jeopardy-blue);
+  color: var(--jeopardy-white);
   min-height: 100vh;
   direction: rtl;
 }
@@ -37,42 +30,42 @@ body {
   grid-template-columns: 2fr 1fr;
   gap: 24px;
   padding: 28px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  box-shadow: var(--glow);
+  background: var(--jeopardy-dark-blue);
+  border: 2px solid var(--border);
+  border-radius: 0;
 }
 
 .hero h1 {
   margin: 6px 0 8px;
   font-size: 48px;
   letter-spacing: -1px;
+  color: var(--jeopardy-yellow);
 }
 
 .hero .lede {
   margin: 0 0 12px;
-  color: var(--muted);
+  color: var(--jeopardy-white);
   max-width: 540px;
 }
 
 .hero-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
+  background: var(--jeopardy-dark-blue);
+  border: 2px solid var(--border);
+  border-radius: 0;
   padding: 16px 18px;
 }
 
 .hero-card ol {
   margin: 8px 0 0;
   padding-left: 18px;
-  color: var(--muted);
+  color: var(--jeopardy-white);
 }
 
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 12px;
-  color: var(--accent-2);
+  color: var(--jeopardy-yellow);
   margin: 0;
 }
 
@@ -89,16 +82,16 @@ body {
 .controls {
   margin: 32px 0 16px;
   padding: 20px;
-  background: var(--panel);
-  border-radius: 16px;
-  border: 1px solid var(--border);
+  background: var(--jeopardy-dark-blue);
+  border-radius: 0;
+  border: 2px solid var(--border);
   display: grid;
   gap: 18px;
 }
 
 .stack label {
   display: block;
-  color: var(--muted);
+  color: var(--jeopardy-white);
   margin-bottom: 6px;
 }
 
@@ -109,43 +102,40 @@ body {
 
 input {
   padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
+  border-radius: 0;
+  border: 2px solid var(--border);
+  background: var(--jeopardy-blue);
+  color: var(--jeopardy-white);
   flex: 1;
 }
 
 button {
-  border: none;
+  border: 2px solid var(--border);
   padding: 12px 16px;
-  border-radius: 10px;
+  border-radius: 0;
   font-weight: 700;
   cursor: pointer;
-  background: linear-gradient(120deg, var(--accent), var(--accent-2));
-  color: var(--ink);
-  transition: transform 120ms ease, box-shadow 120ms ease;
-  box-shadow: 0 10px 25px rgba(255, 92, 141, 0.25);
+  background: var(--jeopardy-blue);
+  color: var(--jeopardy-white);
+  transition: none;
 }
 
 button:hover {
-  transform: translateY(-1px);
+  background: var(--jeopardy-dark-blue);
 }
 
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  transform: none;
 }
 
 button.ghost {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text);
-  box-shadow: none;
+  background: var(--jeopardy-dark-blue);
+  color: var(--jeopardy-white);
 }
 
 .link {
-  color: var(--accent-2);
+  color: var(--jeopardy-yellow);
   text-decoration: none;
   font-weight: 600;
 }
@@ -158,9 +148,9 @@ button.ghost {
 
 .player-card {
   padding: 12px 14px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  background: var(--jeopardy-dark-blue);
+  border: 2px solid var(--border);
+  border-radius: 0;
   display: grid;
   gap: 6px;
 }
@@ -174,6 +164,7 @@ button.ghost {
 .score {
   font-size: 22px;
   font-weight: 700;
+  color: var(--jeopardy-yellow);
 }
 
 .badge {
@@ -181,22 +172,22 @@ button.ghost {
   align-items: center;
   justify-content: center;
   padding: 2px 8px;
-  border-radius: 999px;
-  background: rgba(77, 208, 225, 0.2);
-  color: var(--accent-2);
+  border-radius: 0;
+  background: var(--jeopardy-blue);
+  color: var(--jeopardy-white);
   font-size: 12px;
 }
 
 .board {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 10px;
+  gap: 0;
 }
 
 .column {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 14px;
+  background: var(--jeopardy-blue);
+  border: 2px solid var(--border);
+  border-radius: 0;
   overflow: hidden;
   min-height: 320px;
   display: grid;
@@ -209,19 +200,22 @@ button.ghost {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 14px;
-  background: rgba(255, 255, 255, 0.04);
-  border-bottom: 1px solid var(--border);
+  background: var(--jeopardy-blue);
+  border-bottom: 2px solid var(--border);
+  color: var(--jeopardy-yellow);
+  text-align: center;
 }
 
 .cell {
   display: grid;
   place-items: center;
   padding: 18px 10px;
-  color: #ffd166;
+  color: var(--jeopardy-white);
   font-weight: 700;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--border);
   cursor: pointer;
-  transition: background 120ms ease, transform 120ms ease;
+  background: var(--jeopardy-blue);
+  transition: background 120ms ease;
 }
 
 .cell:last-child {
@@ -229,13 +223,12 @@ button.ghost {
 }
 
 .cell:hover {
-  background: rgba(255, 255, 255, 0.04);
-  transform: translateY(-1px);
+  background: var(--jeopardy-dark-blue);
 }
 
 .cell.used {
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--muted);
+  background: var(--jeopardy-dark-blue);
+  color: var(--jeopardy-white);
   cursor: default;
   text-decoration: line-through;
 }
@@ -246,8 +239,7 @@ button.ghost {
   display: none;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.8);
   padding: 20px;
 }
 
@@ -256,16 +248,15 @@ button.ghost {
 }
 
 .modal-surface {
-  background: #0a0d1e;
-  color: var(--text);
-  border-radius: 16px;
+  background: var(--jeopardy-blue);
+  color: var(--jeopardy-white);
+  border-radius: 0;
   padding: 18px;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   max-width: 720px;
   width: 100%;
   display: grid;
   gap: 12px;
-  box-shadow: var(--glow);
 }
 
 .modal-head {
@@ -277,15 +268,16 @@ button.ghost {
 
 .pill {
   padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(255, 92, 141, 0.15);
-  color: var(--accent);
+  border-radius: 0;
+  background: var(--jeopardy-dark-blue);
+  color: var(--jeopardy-yellow);
   margin: 0;
 }
 
 .question {
   font-size: 22px;
   margin: 0;
+  color: var(--jeopardy-white);
 }
 
 .answer-row {
@@ -294,10 +286,11 @@ button.ghost {
 }
 
 .answer {
-  background: rgba(77, 208, 225, 0.08);
-  border-radius: 12px;
+  background: var(--jeopardy-dark-blue);
+  border-radius: 0;
   padding: 12px;
   margin: 0;
+  color: var(--jeopardy-yellow);
 }
 
 .modal-actions {
@@ -311,9 +304,9 @@ button.ghost {
   align-items: center;
   gap: 8px;
   padding: 10px 12px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid var(--border);
+  border-radius: 0;
+  background: var(--jeopardy-dark-blue);
 }
 
 .modal-foot {
@@ -322,7 +315,7 @@ button.ghost {
 }
 
 .muted {
-  color: var(--muted);
+  color: var(--jeopardy-white);
   margin: 0;
 }
 
