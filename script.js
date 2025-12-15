@@ -1,42 +1,53 @@
 const categories = [
   {
-    title: "טכנולוגיה",
+    title: "מוזיקה ובידור",
     clues: [
-      { value: 200, prompt: "שפת סימון קלה שמניעה את רוב קבצי README.", answer: "מרקדאון" },
-      { value: 400, prompt: "פקודת Git שרשימה קומיטים עם גיבובים מקוצרים.", answer: "git log --oneline" },
-      { value: 600, prompt: "שם זמן הריצה של JavaScript הבנוי על מנוע V8 של Chrome.", answer: "Node.js" },
-      { value: 800, prompt: "מודל פריסה CSS המשתמש בשורות ועמודות ללא floats.", answer: "CSS Grid" },
-      { value: 1000, prompt: "קוד סטטוס HTTP עבור 'Unauthorized'.", answer: "401" }
+      { value: 100, prompt: "באיזו שנה יצא הסינגל 'Drivers License' של Olivia Rodrigo?", options: ["2018","2019","2020","2021"], correct: 3, explanation: "'Drivers License' יצא בשנת 2021 והפך ללהיט עולמי." },
+      { value: 200, prompt: "איזו זמרת הוציאה את אלבום הבכורה 'When We All Fall Asleep, Where Do We Go?'?", options: ["Billie Eilish","Ariana Grande","Dua Lipa","Lana Del Rey"], correct: 0, explanation: "Billie Eilish הוציאה את האלבום הזה והייתה להצלחה מסחררת." },
+      { value: 300, prompt: "אילו שירות סטרימינג מפיק את הסדרה 'Stranger Things'?", options: ["Netflix","HBO","Amazon Prime","Hulu"], correct: 0, explanation: "'Stranger Things' היא סדרה מקורית של Netflix." },
+      { value: 400, prompt: "איזו שיטה נפוצה להפוך שיר לויראלי בפלטפורמות כמו TikTok?", options: ["שחרור סינגל","אתגר ריקוד","מיני-אלבום","מופע חי"], correct: 1, explanation: "אתגרי ריקוד וקיצורי וידאו תורמים להפצת שירים במהירות." },
+      { value: 500, prompt: "איזו מגמה מוזיקלית עמדה במרכזם של אתגרים ריקודיים ברשת בשנים האחרונות?", options: ["דאנס-פופ וטיקטוק-צ'אלנג'ים","ג'אז קלאסי","מוזיקת עולם","אופרות"], correct: 0, explanation: "אתגרים ברשת ושירים קצרים פופולריים במיוחד בפלטפורמות כמו TikTok." }
     ]
   },
   {
-    title: "מדע",
+    title: "אפליקציות ורשתות חברתיות",
     clues: [
-      { value: 200, prompt: "הכוכב הלכת הידוע בטבעותיו הבולטות.", answer: "סטורן" },
-      { value: 400, prompt: "יחידה המשמשת למדידת התנגדות חשמלית.", answer: "אוהם" },
-      { value: 600, prompt: "תהליך שצמחים משתמשים בו להמרת אור לאנרגיה.", answer: "פוטוסינתזה" },
-      { value: 800, prompt: "החלקיק הקטן ביותר שעדיין שומר על תכונותיו של יסוד.", answer: "אטום" },
-      { value: 1000, prompt: "גז המהווה כ-78% מהאטמוספירה של כדור הארץ.", answer: "חנקן" }
+      { value: 100, prompt: "איזו חברה רכשה את Instagram?", options: ["Google","Facebook","Microsoft","Apple"], correct: 1, explanation: "Facebook (כיום Meta) רכשה את Instagram בשנת 2012." },
+      { value: 200, prompt: "מה משמעות הקיצור 'DM' ברשתות חברתיות?", options: ["Direct Message","Daily Message","Digital Media","Data Manager"], correct: 0, explanation: "DM = Direct Message, הודעה פרטית בין משתמשים." },
+      { value: 300, prompt: "מה הייתה ההגבלה המקורית במספר התווים לציוץ בטוויטר?", options: ["140","280","160","100"], correct: 0, explanation: "ההגבלה המקורית הייתה 140 תווים." },
+      { value: 400, prompt: "באיזו שנה אוחדה TikTok עם Musical.ly (המהדורה הבינלאומית של TikTok) וביססה את מעמדה העולמי?", options: ["2016","2017","2018","2019"], correct: 2, explanation: "המיזוג התרחש ב-2018." },
+      { value: 500, prompt: "מי היה אחד ממייסדי Twitter?", options: ["Jack Dorsey","Elon Musk","Mark Zuckerberg","Jeff Bezos"], correct: 0, explanation: "Jack Dorsey הוא אחד ממייסדי Twitter." }
     ]
   },
   {
-    title: "סרטים",
+    title: "משחקים ודיגיטל",
     clues: [
-      { value: 200, prompt: "במאי של 'Inception'.", answer: "כריסטופר נולן" },
-      { value: 400, prompt: "הסאגה הגלקטית הכוללת את הכוח.", answer: "מלחמת הכוכבים" },
-      { value: 600, prompt: "סרט אנימציה עם דג קלון המחפש את בנו.", answer: "מציאת נמו" },
-      { value: 800, prompt: "מוזיקל המתרחש בעיר המלאכים בכיכובם של אמה סטון וריין גוסלינג.", answer: "לה לה לנד" },
-      { value: 1000, prompt: "סרט שבו 'אין כף'.", answer: "מטריקס" }
+      { value: 100, prompt: "באיזה משחק מופיע חומר בשם 'redstone' המשמש לבניית מעגלים ומכונות?", options: ["Minecraft","Fortnite","Among Us","Roblox"], correct: 0, explanation: "Redstone הוא מרכיב במיינקראפט לשימוש במכניקה ואלקטרוניקה פשוטה בתוך המשחק." },
+      { value: 200, prompt: "איזה משחק פופולרי קידם מאוד את ז'אנר ה‑'Battle Royale' בשנת 2017?", options: ["PUBG","Fortnite","Apex Legends","H1Z1"], correct: 0, explanation: "PUBG היה אחד המשחקים שביססו את הז'אנר בשוק המסחרי בשנת 2017." },
+      { value: 300, prompt: "מה משמעות המילה 'indie' בהקשר של משחקים?", options: ["משחק עצמאי","משחק ענק","משחק מקוון","כלי פיתוח"], correct: 0, explanation: "Indie מתייחס למשחק שמפותח ללא תמיכה של חברת הוצאה גדולה." },
+      { value: 400, prompt: "איזה מנוע פיתוח משחקים נפוץ תומך ב‑C# ונמצא בשימוש רחב בקרב מפתחי משחקים קטנים וגדולים?", options: ["Unity","Unreal","Godot","CryEngine"], correct: 0, explanation: "Unity משתמשת ב‑C# ונפוצה מאוד בקרב מפתחים." },
+      { value: 500, prompt: "באיזו שפה כותבים רוב הסקריפטים ב‑Roblox?", options: ["JavaScript","Lua","Python","C#"], correct: 1, explanation: "Roblox Studio משתמשת בשפת Lua לכתיבת סקריפטים." }
     ]
   },
   {
-    title: "כללי",
+    title: "מימס (ממים)",
     clues: [
-      { value: 200, prompt: "ההפך מאנכי.", answer: "אופקי" },
-      { value: 400, prompt: "צבע ראשי שהוא תערובת של אדום וכחול.", answer: "סגול" },
-      { value: 600, prompt: "מספר היבשות בכדור הארץ.", answer: "שבע" },
-      { value: 800, prompt: "מתכת המושכת למגנטים.", answer: "ברזל" },
-      { value: 1000, prompt: "שפה המדוברת בברזיל.", answer: "פורטוגזית" }
+      { value: 100, prompt: "איזו גזע כלבים קשור למם המפורסם 'Doge'?", options: ["שיבה אינו (Shiba Inu)","לברדור","פאג","בולדוג"], correct: 0, explanation: "Doge מבוסס על כלב מסוג Shiba Inu והפך למם פופולרי." },
+      { value: 200, prompt: "מהו 'Rickroll' בדרך כלל?", options: ["שיר לימודי","קישור שמוביל לשיר של Rick Astley","אתגר ריקוד","בדיחה על סרט"], correct: 1, explanation: "Rickroll הוא טריק שבו שולחים קישור שמוביל לשיר 'Never Gonna Give You Up' של Rick Astley במקום לתוכן המצופה." },
+      { value: 300, prompt: "איך נקרא המם שבו גבר מביט באישה אחרת בזמן שבן זוגתו כועסת?", options: ["Distracted Boyfriend","Two Buttons","Hide the Pain Harold","Success Kid"], correct: 0, explanation: "ה-'Distracted Boyfriend' הפך למם עולמי שמייצג הסחות דעת ורמאות." },
+      { value: 400, prompt: "מי יצר את דמות המם 'Pepe the Frog'?", options: ["Matt Furie","Richard Dawkins","András Arató","KC Green"], correct: 0, explanation: "Pepe נוצר על ידי המאייר Matt Furie בסדרת הקומיקס 'Boys Club'." },
+      { value: 500, prompt: "מהו השם האמיתי של האדם שהתפרסם כמם 'Hide the Pain Harold'?", options: ["András Arató","Rick Astley","Success Kid","Gabe the Dog"], correct: 0, explanation: "האדם בתמונה הוא András Arató, שהפך לסמל של המם 'Hide the Pain Harold'." }
+    ]
+  },
+
+  {
+    title: "דיסני ופיקסר",
+    clues: [
+      { value: 100, prompt: "מי מבין הבאים הוא המייסד המוכר של חברת דיסני?", options: ["וולט דיסני","ג'ון לאסטר","פיט דוקטור","אנדרו סטנטון"], correct: 0, explanation: "וולט דיסני ייסד את החברה יחד עם אחיו רוי והפך לסמל של אנימציה קלאסית." },
+      { value: 200, prompt: "איזו חברה הפיקה את הסרט 'Toy Story' הראשון?", options: ["דיסני","פיקסר","דרימוורקס","אולפן סרטים אחר"], correct: 1, explanation: "'Toy Story' הופק על ידי Pixar והיה לסרט האנימציה הממוחשב הראשון באורך מלא של פיקסר." },
+      { value: 300, prompt: "באיזו שנה יצא הסרט 'Toy Story' המקורי?", options: ["1993","1995","1997","1999"], correct: 1, explanation: "'Toy Story' יצא ב-1995 והפך לאבן דרך באנימציה ממוחשבת." },
+      { value: 400, prompt: "מי מבין הבאים ביים את הסרט 'Up'?", options: ["פיט דוקטור","ג'ון לאסטר","אנדרו סטנטון","מאט פאלקונר"], correct: 0, explanation: "פיט דוקטור (Pete Docter) היה אחד מבימאי 'Up'." },
+      { value: 500, prompt: "איזה סרט של פיקסר היה מועמד לפרס אוסקר לסרט הטוב ביותר (Best Picture)?", options: ["Finding Nemo","Up","Toy Story 2","Monsters, Inc."], correct: 1, explanation: "'Up' היה מועמד לפרס אוסקר לסרט הטוב ביותר ונחשב להישג יוצא דופן עבור סרט אנימציה." }
     ]
   }
 ];
@@ -53,7 +64,6 @@ const modalValue = document.getElementById("modal-value");
 const modalQuestion = document.getElementById("modal-question");
 const modalAnswer = document.getElementById("modal-answer");
 const modalActions = document.getElementById("modal-actions");
-const showAnswerBtn = document.getElementById("show-answer");
 const closeModalBtn = document.getElementById("close-modal");
 const skipQuestionBtn = document.getElementById("skip-question");
 
@@ -119,6 +129,10 @@ function addPlayer(name) {
   const id = crypto.randomUUID ? crypto.randomUUID() : String(Date.now());
   state.players.push({ id, name: name.trim(), score: 0 });
   playerNameInput.value = "";
+  if (state.players.length === 1) {
+    playersEl.style.display = 'grid';
+    showPlayersBtn.textContent = 'הסתר שחקנים';
+  }
   renderPlayers();
 }
 
@@ -157,11 +171,67 @@ function openClue(catIdx, clueIdx) {
   modalCategory.textContent = categories[catIdx].title;
   modalValue.textContent = `$${clue.value}`;
   modalQuestion.textContent = clue.prompt;
-  modalAnswer.textContent = clue.answer;
+  modalAnswer.textContent = clue.explanation || '';
   modalAnswer.hidden = true;
   modal.setAttribute("aria-hidden", "false");
 
+  // image handling
+  const imgContainer = document.getElementById('modal-image');
+  const imgEl = document.getElementById('modal-img');
+  const imgCaption = document.getElementById('modal-img-caption');
+  if (clue.image) {
+    imgEl.src = clue.image;
+    imgEl.alt = clue.imageAlt || clue.prompt;
+    imgCaption.innerHTML = `${clue.imageAttribution || ''} <a href="${clue.imageSource || '#'}" target="_blank" rel="noopener">מקור</a>`;
+    imgContainer.hidden = false;
+  } else {
+    imgEl.src = '';
+    imgEl.alt = '';
+    imgCaption.textContent = '';
+    imgContainer.hidden = true;
+  }
+
+  renderOptions(clue);
   renderModalActions(clue);
+}
+
+function renderOptions(clue) {
+  const optsEl = document.getElementById('modal-options');
+  optsEl.innerHTML = '';
+  if (!clue.options || !clue.options.length) return;
+
+  clue.options.forEach((opt, idx) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.textContent = opt;
+    btn.dataset.idx = idx;
+    btn.addEventListener('click', (e) => {
+      // disable all option buttons
+      optsEl.querySelectorAll('button').forEach(b => b.disabled = true);
+      const clickedIdx = Number(btn.dataset.idx);
+      const correctIdx = Number(clue.correct);
+
+      // reveal explanation
+      modalAnswer.hidden = false;
+      modalAnswer.textContent = clue.explanation || '';
+
+      // highlight selection and correct answer
+      if (clickedIdx === correctIdx) {
+        btn.classList.add('correct');
+        createConfetti();
+        createFirework(e.clientX, e.clientY);
+      } else {
+        btn.classList.add('wrong');
+        const correctBtn = optsEl.querySelector(`button[data-idx="${correctIdx}"]`);
+        if (correctBtn) correctBtn.classList.add('correct');
+      }
+
+      // mark clue used so it can't be selected again
+      markUsed(state.active);
+    });
+
+    optsEl.appendChild(btn);
+  });
 }
 
 function renderModalActions(clue) {
@@ -181,12 +251,16 @@ function renderModalActions(clue) {
     `;
 
     row.querySelectorAll("button").forEach((btn) => {
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", (e) => {
         const delta = Number(btn.dataset.delta);
         const id = btn.dataset.player;
         updateScore(id, delta);
         markUsed(state.active);
         closeModal();
+        if (delta > 0) {
+          createConfetti();
+          createFirework(e.clientX, e.clientY);
+        }
       });
     });
 
@@ -216,14 +290,97 @@ function resetGame() {
   closeModal();
 }
 
+const showPlayersBtn = document.getElementById("show-players");
+
+// Splash / opening screen elements
+const splash = document.getElementById('splash');
+const splashInput = document.getElementById('splash-player-name');
+const splashAddBtn = document.getElementById('splash-add-player');
+const splashPlayersList = document.getElementById('splash-players');
+const startGameBtn = document.getElementById('start-game');
+
+// Intro screen elements
+const intro = document.getElementById('intro');
+const introContinue = document.getElementById('intro-continue');
+
+// Initially: show intro, hide splash
+if (intro) {
+  intro.setAttribute('aria-hidden','false');
+  intro.style.display = 'flex';
+}
+if (splash) {
+  splash.setAttribute('aria-hidden','true');
+  splash.style.display = 'none';
+}
+
+function renderSplashPlayers() {
+  splashPlayersList.innerHTML = '';
+  state.players.forEach((p) => {
+    const li = document.createElement('li');
+    li.className = 'splash-player';
+    li.innerHTML = `<span>${p.name}</span><button class="ghost" data-remove="${p.id}">הסר</button>`;
+    li.querySelector('button').addEventListener('click', () => {
+      removePlayer(p.id);
+      renderSplashPlayers();
+      startGameBtn.disabled = state.players.length === 0;
+    });
+    splashPlayersList.appendChild(li);
+  });
+  startGameBtn.disabled = state.players.length === 0;
+}
+
+splashAddBtn.addEventListener('click', () => {
+  const name = splashInput.value;
+  if (!name.trim()) return;
+  addPlayer(name);
+  renderSplashPlayers();
+  splashInput.value = '';
+});
+
+splashInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') splashAddBtn.click(); });
+
+startGameBtn.addEventListener('click', () => {
+  if (!state.players.length) { alert('הוסף לפחות שחקן אחד'); return; }
+  splash.setAttribute('aria-hidden','true');
+  splash.style.display = 'none';
+  playersEl.style.display = 'grid';
+  addPlayerSection.style.display = 'block';
+  showPlayersBtn.textContent = 'הסתר שחקנים';
+  renderBoard();
+  renderPlayers();
+});
+
+// Intro continue handler: hide intro, show splash and play a little confetti
+introContinue.addEventListener('click', () => {
+  intro.setAttribute('aria-hidden','true');
+  intro.style.display = 'none';
+  splash.setAttribute('aria-hidden','false');
+  splash.style.display = 'flex';
+  createConfetti();
+});
+
+intro.addEventListener('keydown', (e) => { if (e.key === 'Enter') introContinue.click(); });
+
 addPlayerBtn.addEventListener("click", () => addPlayer(playerNameInput.value));
 playerNameInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") addPlayer(playerNameInput.value);
 });
 
-showAnswerBtn.addEventListener("click", () => {
-  modalAnswer.hidden = false;
+const addPlayerSection = document.getElementById("add-player-section");
+
+showPlayersBtn.addEventListener("click", () => {
+  if (playersEl.style.display === 'none') {
+    playersEl.style.display = 'grid';
+    addPlayerSection.style.display = 'block';
+    showPlayersBtn.textContent = 'הסתר שחקנים';
+  } else {
+    playersEl.style.display = 'none';
+    addPlayerSection.style.display = 'none';
+    showPlayersBtn.textContent = 'הצג שחקנים';
+  }
 });
+
+
 
 closeModalBtn.addEventListener("click", closeModal);
 skipQuestionBtn.addEventListener("click", closeModal);
@@ -236,3 +393,50 @@ window.addEventListener("keydown", (e) => {
 
 renderBoard();
 renderPlayers();
+
+function createConfetti() {
+  const colors = ['#ff5c8d', '#4dd0e1', '#ffd166', '#ff8c42', '#a29bfe', '#fd79a8', '#00b894', '#e17055'];
+  const shapes = ['circle', 'square', 'triangle'];
+  for (let i = 0; i < 150; i++) {
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    const shape = shapes[Math.floor(Math.random() * shapes.length)];
+    if (shape === 'circle') {
+      confetti.style.borderRadius = '50%';
+      confetti.style.backgroundColor = color;
+    } else if (shape === 'triangle') {
+      confetti.style.width = '0';
+      confetti.style.height = '0';
+      confetti.style.borderLeft = '5px solid transparent';
+      confetti.style.borderRight = '5px solid transparent';
+      confetti.style.borderBottom = '10px solid ' + color;
+    } else {
+      confetti.style.backgroundColor = color;
+    }
+    confetti.style.left = Math.random() * 100 + 'vw';
+    confetti.style.animationDelay = Math.random() * 2 + 's';
+    confetti.style.animationDuration = (Math.random() * 3 + 3) + 's';
+    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+    document.body.appendChild(confetti);
+    setTimeout(() => confetti.remove(), 6000);
+  }
+}
+
+function createFirework(x, y) {
+  const colors = ['#ff5c8d', '#4dd0e1', '#ffd166', '#ff8c42', '#a29bfe'];
+  for (let i = 0; i < 20; i++) {
+    const firework = document.createElement('div');
+    firework.className = 'firework';
+    firework.style.left = x + 'px';
+    firework.style.top = y + 'px';
+    firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    firework.style.setProperty('--dx', (Math.random() - 0.5) * 200);
+    firework.style.setProperty('--dy', (Math.random() - 0.5) * 200);
+    document.body.appendChild(firework);
+    setTimeout(() => firework.remove(), 1000);
+  }
+}
+
+// Trigger confetti on correct answer
+// In the modal actions, when correct, call createConfetti();

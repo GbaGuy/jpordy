@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jpordy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="intro" class="intro" role="dialog" aria-modal="true">
+    <div class="intro-surface">
+      <h2 class="intro-title">החלום שלי הוא להנחות ג'פרדי!</h2>
+      <p class="intro-sub">לחץ להמשך ולהגדיר שחקנים</p>
+      <button id="intro-continue" class="big">המשך</button>
+    </div>
+  </div>
+
+  <div id="splash" class="splash" role="dialog" aria-modal="true">
+    <div class="splash-surface">
+      <h2>הגדרת שחקנים</h2>
+      <div class="inline">
+        <input id="splash-player-name" type="text" placeholder="שם שחקן" aria-label="שם שחקן" />
+        <button id="splash-add-player">הוסף</button>
+      </div>
+      <ul id="splash-players" class="splash-list"></ul>
+      <div class="splash-actions">
+        <button id="start-game" disabled>התחל משחק</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <h1>jpordy</h1>
+    <div class="header-buttons">
+      <button id="show-players" class="small">הצג שחקנים</button>
+      <button id="reset-game" class="small">איפוס משחק</button>
+    </div>
+    <section class="controls">
+      <div class="stack" id="add-player-section" style="display: none;">
+        <label for="player-name">הוסף שחקן</label>
+        <div class="inline">
+          <input id="player-name" type="text" placeholder="שם שחקן" aria-label="שם שחקן" />
+          <button id="add-player">הוסף</button>
+        </div>
+      </div>
+      <div class="players" id="players" style="display: none;"></div>
+    </section>
+
+    <section class="board" id="board"></section>
+  </div>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-surface">
+      <div class="modal-head">
+        <p id="modal-category" class="muted"></p>
+        <p id="modal-value" class="pill"></p>
+        <button class="ghost" id="close-modal" aria-label="סגור">×</button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-question" class="question"></p>
+        <div id="modal-image" class="modal-image" hidden>
+          <img id="modal-img" alt="" />
+          <figcaption id="modal-img-caption" class="muted small"></figcaption>
+        </div>
+        <div id="modal-options" class="options" role="list"></div>
+        <div class="answer-row">
+          <p id="modal-answer" class="answer" hidden></p>
+        </div>
+      </div>
+      <div id="modal-actions" class="modal-actions"></div>
+      <div class="modal-foot">
+        <button class="ghost" id="skip-question">דלג ללא ניקוד</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
