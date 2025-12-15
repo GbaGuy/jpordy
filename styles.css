@@ -1,16 +1,12 @@
 :root {
   --jeopardy-blue: #000080;
-  --jeopardy-yellow: #FFD166; /* warmer */
+  --jeopardy-yellow: #FFFF00;
   --jeopardy-white: #FFFFFF;
   --jeopardy-dark-blue: #000040;
   --border: #FFFFFF;
   --shadow: rgba(0,0,0,0.5);
-  --glow: rgba(255, 140, 66, 0.28); /* orange glow */
-  --accent-1: #ff8c42; /* warm orange */
-  --accent-2: #ff6b35; /* deep coral orange */
-  --accent-gold: #ffd166;
-  --sparkle: rgba(255,255,255,0.95);
-} 
+  --glow: rgba(255, 255, 0, 0.3);
+}
 
 * {
   box-sizing: border-box;
@@ -20,24 +16,22 @@ body {
   margin: 0;
   font-family: 'Inter', 'Space Grotesk', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: 
-    radial-gradient(circle at 20% 20%, rgba(255, 140, 66, 0.08), transparent 45%),
-    radial-gradient(circle at 80% 80%, rgba(255, 180, 90, 0.06), transparent 45%),
-    linear-gradient(135deg, #0b1430 0%, #081022 50%, #1a1b2f 100%);
+    radial-gradient(circle at 20% 20%, rgba(255, 92, 141, 0.1), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(77, 208, 225, 0.1), transparent 50%),
+    linear-gradient(135deg, #000080 0%, #000040 50%, #000080 100%);
   color: var(--jeopardy-white);
   min-height: 100vh;
   direction: rtl;
   overflow-x: hidden;
 }
 
-@keyframes confettiFall {
+@keyframes confetti {
   0% {
-    transform: translateY(-120vh) rotate(0deg) translateX(0);
+    transform: translateY(-100vh) rotate(0deg);
     opacity: 1;
   }
-  30% { transform: translateY(-30vh) rotate(180deg) translateX(10vw); }
-  60% { transform: translateY(20vh) rotate(360deg) translateX(-8vw); opacity: 0.9; }
   100% {
-    transform: translateY(120vh) rotate(720deg) translateX(0);
+    transform: translateY(100vh) rotate(720deg);
     opacity: 0;
   }
 }
@@ -47,33 +41,30 @@ body {
   width: 10px;
   height: 10px;
   pointer-events: none;
-  z-index: 1100;
-  will-change: transform, opacity;
-  animation: confettiFall linear;
-  mix-blend-mode: screen;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  z-index: 1000;
+  animation: confetti 3s linear infinite;
 }
 
-/* sparkles */
-@keyframes sparkle {
-  0% { transform: scale(0.6); opacity: 0.15; }
-  50% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(0.8); opacity: 0; }
+@keyframes firework {
+  0% {
+    transform: scale(0) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translate(var(--dx, 0), var(--dy, 0));
+    opacity: 0;
+  }
 }
 
-.sparkle {
+.firework {
   position: fixed;
-  width: 6px;
-  height: 6px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, var(--sparkle), rgba(255,255,255,0));
   pointer-events: none;
-  z-index: 1150;
-  filter: drop-shadow(0 2px 8px rgba(255,255,255,0.2));
-  animation: sparkle 900ms ease-out forwards;
+  z-index: 1000;
+  animation: firework 1s ease-out;
 }
-
- 
 
 .page {
   max-width: 1200px;
@@ -90,7 +81,7 @@ h1 {
   font-family: 'Inter', 'Space Grotesk', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 800;
   letter-spacing: 0.04em;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 30px var(--glow);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 20px var(--glow);
   animation: fadeIn 1s ease, glow 2s infinite alternate;
 }
 
@@ -472,23 +463,8 @@ button.ghost {
   background: radial-gradient(circle at 20% 30%, rgba(255,92,141,0.12), transparent 15%), radial-gradient(circle at 80% 70%, rgba(77,208,225,0.08), transparent 20%), linear-gradient(135deg, #0b1430 0%, #081022 100%);
   z-index: 1300;
   padding: 20px;
-  overflow: hidden;
 }
 
-/* floating stars */
-.intro::after {
-  content: '';
-  position: absolute;
-  left: -10%;
-  top: -10%;
-  width: 140%;
-  height: 140%;
-  background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08), transparent 6%), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.06), transparent 6%);
-  animation: moveStars 20s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes moveStars { from { transform: translateY(0); } to { transform: translateY(-40px); } }
 .intro-surface {
   text-align: center;
   padding: 40px 28px;
