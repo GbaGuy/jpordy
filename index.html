@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JPordy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Playable on GitHub Pages</p>
+        <h1>JPordy</h1>
+        <p class="lede">Quick Jeopardy-style board with players, scores, revealable questions, and answers.</p>
+        <div class="cta-row">
+          <button id="reset-game" class="ghost">Reset game</button>
+          <a class="link" href="https://docs.github.com/en/pages" target="_blank" rel="noreferrer">How to publish on GitHub Pages</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p class="muted">Setup</p>
+        <ol>
+          <li>Add players below</li>
+          <li>Click a value to reveal the prompt</li>
+          <li>Mark who got it right or wrong</li>
+          <li>Watch the scores update</li>
+        </ol>
+      </div>
+    </header>
+
+    <section class="controls">
+      <div class="stack">
+        <label for="player-name">Add player</label>
+        <div class="inline">
+          <input id="player-name" type="text" placeholder="Player name" aria-label="Player name" />
+          <button id="add-player">Add</button>
+        </div>
+      </div>
+      <div class="players" id="players"></div>
+    </section>
+
+    <section class="board" id="board"></section>
+  </div>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-surface">
+      <div class="modal-head">
+        <p id="modal-category" class="muted"></p>
+        <p id="modal-value" class="pill"></p>
+        <button class="ghost" id="close-modal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-question" class="question"></p>
+        <div class="answer-row">
+          <button id="show-answer">Show answer</button>
+          <p id="modal-answer" class="answer" hidden></p>
+        </div>
+      </div>
+      <div id="modal-actions" class="modal-actions"></div>
+      <div class="modal-foot">
+        <button class="ghost" id="skip-question">Skip without scoring</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
