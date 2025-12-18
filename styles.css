@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700;800&display=swap');
+
 :root {
   --jeopardy-blue: #000080;
   --jeopardy-yellow: #FFFF00;
@@ -14,7 +16,7 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Space Grotesk', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Noto Sans Hebrew', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: 
     radial-gradient(circle at 20% 20%, rgba(255, 92, 141, 0.1), transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(77, 208, 225, 0.1), transparent 50%),
@@ -23,6 +25,7 @@ body {
   min-height: 100vh;
   direction: rtl;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 @keyframes confetti {
@@ -78,7 +81,7 @@ h1 {
   font-size: 60px;
   margin: 20px 0;
   text-transform: uppercase;
-  font-family: 'Inter', 'Space Grotesk', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Noto Sans Hebrew', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 800;
   letter-spacing: 0.04em;
   text-shadow: 0 2px 4px rgba(0,0,0,0.5), 0 0 20px var(--glow);
@@ -116,6 +119,7 @@ button.small {
   font-size: 48px;
   letter-spacing: -1px;
   color: var(--jeopardy-yellow);
+  font-family: 'Noto Sans Hebrew', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .hero .lede {
@@ -544,6 +548,7 @@ button.ghost {
   font-size: 32px;
   margin: 0;
   color: var(--jeopardy-white);
+  font-family: 'Noto Sans Hebrew', system-ui, sans-serif;
 }
 
 .answer-row {
@@ -588,6 +593,7 @@ button.ghost {
   cursor: pointer;
   font-weight: 800;
   font-size: 18px;
+  font-family: 'Noto Sans Hebrew', system-ui, sans-serif;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   box-shadow: 0 6px 14px rgba(0,0,0,0.28);
   min-height: 64px;
@@ -623,6 +629,7 @@ button.ghost {
   margin: 0;
   color: var(--jeopardy-yellow);
   font-size: 24px;
+  font-family: 'Noto Sans Hebrew', system-ui, sans-serif;
 }
 
 .modal-actions {

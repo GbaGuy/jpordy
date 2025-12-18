@@ -9,36 +9,37 @@ const categories = [
       { value: 500, prompt: "מי הוציא את האלבום 'folklore'?", options: ["Taylor Swift","Billie Eilish","Adele","Lorde"], correct: 0, explanation: "'folklore' שוחרר על ידי Taylor Swift בשנת 2020." }
     ]
   },
-
-  {
-    title: "ידע כללי (קשה)",
-    clues: [
-      { value: 100, prompt: "כמה מדינות חברות באו\"ם?", options: ["193","195","190","200"], correct: 0, explanation: "לפי האומות המאוחדות יש 193 מדינות חברות." },
-      { value: 200, prompt: "כמה מדינות חברות באיחוד האירופי?", options: ["24","25","27","28"], correct: 2, explanation: "נכון ל־2025 יש 27 מדינות חברות באיחוד האירופי." },
-      { value: 300, prompt: "לאיזו מדינה משויך הסיומת '.tv'?", options: ["טובאלו","טוניסיה","טורקיה","טונגה"], correct: 0, explanation: ".tv הוא קוד מדינה של טובאלו." },
-      { value: 400, prompt: "מהו המספר האטומי של זהב (Au)?", options: ["79","47","26","82"], correct: 0, explanation: "המספר האטומי של זהב הוא 79." },
-      { value: 500, prompt: "כמה אותיות יש באלפבית הלטיני?", options: ["24","25","26","27"], correct: 2, explanation: "באלפבית הלטיני יש 26 אותיות." }
-    ]
-  },
   {
     title: "מימס (ממים)",
     clues: [
       { value: 100, prompt: "איזה גזע כלבים הוא 'Doge'?", options: ["שיבה","לברדור","פאג","בולדוג"], correct: 0, explanation: "Doge מבוסס על כלב מסוג Shiba (שיבה) והפך למם פופולרי." },
       { value: 200, prompt: "מהו 'Rickroll' בדרך כלל?", options: ["שיר לימודי","קישור שמוביל לשיר של Rick Astley","אתגר ריקוד","בדיחה על סרט"], correct: 1, explanation: "Rickroll הוא טריק שבו שולחים קישור שמוביל לשיר 'Never Gonna Give You Up' של Rick Astley במקום לתוכן המצופה." },
-      { value: 300, prompt: "איך נקרא המם שבו גבר מביט באישה אחרת בזמן שבן זוגתו כועסת?", options: ["Distracted Boyfriend","Two Buttons","Hide the Pain Harold","Success Kid"], correct: 0, explanation: "ה-'Distracted Boyfriend' הפך למם עולמי שמייצג הסחות דעת ורמאות." },
+      { value: 200, prompt: "מהו 'Rickroll' בדרך כלל?", options: ["שיר לימודי","קישור שמוביל לשיר של Rick Astley","אתגר ריקוד","בדיחה על סרט"], correct: 1, explanation: "Rickroll הוא טריק שבו שולחים קישור שמוביל לשיר 'Never Gonna Give You Up' של Rick Astley במקום לתוכן המצופה.", image: "https://i1.sndcdn.com/artworks-x8zI2HVC2pnkK7F5-4xKLyA-t500x500.jpg", imageAlt: "Never Gonna Give You Up – Rickroll artwork", imageSource: "https://i1.sndcdn.com/artworks-x8zI2HVC2pnkK7F5-4xKLyA-t500x500.jpg", imageAttribution: "SoundCloud artwork" },
+      { value: 300, prompt: "איך נקרא המם שבו גבר מביט באישה אחרת בזמן שבן זוגתו כועסת?", options: ["Distracted Boyfriend","Two Buttons","Hide the Pain Harold","Success Kid"], correct: 0, explanation: "ה-'Distracted Boyfriend' הפך למם עולמי שמייצג הסחות דעת ורמאות.", image: "https://media.wired.com/photos/59a459d3b345f64511c5e3d4/191:100/w_1280,c_limit/MemeLoveTriangle_297886754.jpg", imageAlt: "Distracted Boyfriend meme", imageSource: "https://www.wired.com/story/meme-distracted-boyfriend/", imageAttribution: "צילום: Antonio Guillem / Shutterstock via WIRED" },
       { value: 400, prompt: "איזה חיה הוא Pepe?", options: ["כלב","חתול","צפרדע","זאב"], correct: 2, explanation: "Pepe הוא צפרדע — הדמות נוצרה כצפרדע על ידי המאייר Matt Furie." },
-      { value: 500, prompt: "מהו השם האמיתי של האדם שהתפרסם כמם 'Hide the Pain Harold'?", options: ["István Kovács","Péter Nagy","András Arató","Tamás Horváth"], correct: 2, explanation: "האדם בתמונה הוא András Arató, שהפך לסמל של המם 'Hide the Pain Harold'." }
+      { value: 500, prompt: "מהו השם האמיתי של האדם שהתפרסם כמם 'Hide the Pain Harold'?", options: ["István Kovács","Péter Nagy","András Arató","Tamás Horváth"], correct: 2, explanation: "האדם בתמונה הוא András Arató, שהפך לסמל של המם 'Hide the Pain Harold'.", image: "https://media1.tenor.com/m/wGufiBV_pI0AAAAC/hide-the-pain-harold-pain.gif", imageAlt: "Hide the Pain Harold", imageSource: "https://media1.tenor.com/m/wGufiBV_pI0AAAAC/hide-the-pain-harold-pain.gif", imageAttribution: "Tenor GIF" }
     ]
   },
 
   {
     title: "דיסני ופיקסר",
     clues: [
-      { value: 100, prompt: "מי ביים את הסרט 'Toy Story'?", options: ["ג'ון לאסטר","פיט דוקטור","אנדרו סטנטון","וולט דיסני"], correct: 0, explanation: "ג'ון לאסטר (John Lasseter) ביים את 'Toy Story'." },
-      { value: 200, prompt: "באיזו שנה נוסדה פיקסר כחברה עצמאית?", options: ["1979","1986","1995","2000"], correct: 1, explanation: "פיקסר הוקמה כיחידה עצמאית בשנת 1986." },
-      { value: 300, prompt: "מה שמו של המנורה המפורסמת שנמצאת בסמלו של פיקסר?", options: ["Luxo Jr.","Lumi","Pixy","Luxor"], correct: 0, explanation: "המנורה 'Luxo Jr.' הופיעה בקטע הניסיוני של פיקסר והפכה לסמל החברה." },
-      { value: 400, prompt: "מי הלחין את הפסקול של 'Up'?", options: ["Michael Giacchino","Randy Newman","Hans Zimmer","John Williams"], correct: 0, explanation: "Michael Giacchino הלחין את הפסקול של 'Up'." },
+      { value: 100, prompt: "מי ביים את הסרט 'Toy Story'?", options: ["ג'ון לאסטר","פיט דוקטור","אנדרו סטנטון","וולט דיסני"], correct: 0, explanation: "ג'ון לאסטר (John Lasseter) ביים את 'Toy Story'.", image: "https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_.jpg", imageAlt: "פוסטר Toy Story", imageSource: "https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_.jpg", imageAttribution: "Amazon Images" },
+      { value: 200, prompt: "באיזו שנה נוסדה פיקסר כחברה עצמאית?", options: ["1979","1986","1995","2000"], correct: 1, explanation: "פיקסר הוקמה כיחידה עצמאית בשנת 1986.", image: "https://cdnmedia.av.co.il/wp-content/uploads/2016/04/Pixarlogo-1140x660.jpg", imageAlt: "לוגו פיקסר", imageSource: "https://cdnmedia.av.co.il/wp-content/uploads/2016/04/Pixarlogo-1140x660.jpg", imageAttribution: "AV.co.il" },
+      { value: 300, prompt: "מה שמו של המנורה המפורסמת שנמצאת בסמלו של פיקסר?", options: ["Luxo Jr.","Lumi","Pixy","Luxor"], correct: 0, explanation: "המנורה 'Luxo Jr.' הופיעה בקטע הניסיוני של פיקסר והפכה לסמל החברה.", image: "https://i.ytimg.com/vi/lVyOnXCTzl0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAfJFs6zqUikfXHrSxzLrvX1YMdvA", imageAlt: "Luxo Jr. מנורת פיקסר", imageSource: "https://www.youtube.com/watch?v=lVyOnXCTzl0", imageAttribution: "YouTube thumbnail" },
+      { value: 400, prompt: "מי הלחין את הפסקול של 'Up'?", options: ["Michael Giacchino","Randy Newman","Hans Zimmer","John Williams"], correct: 0, explanation: "Michael Giacchino הלחין את הפסקול של 'Up'.", image: "https://upload.wikimedia.org/wikipedia/en/3/33/Up_-_Walt_Disney_Records.jpg", imageAlt: "עטיפת פסקול הסרט Up", imageSource: "https://en.wikipedia.org/wiki/Up_(2009_film)#Music", imageAttribution: "Walt Disney Records / Wikipedia" },
       { value: 500, prompt: "איזה סרט של פיקסר זכה בפרס אוסקר לסרט האנימציה הטוב ביותר בטקס של 2004 (שנחגג על סרטי 2003)?", options: ["Finding Nemo","The Incredibles","Monsters, Inc.","Toy Story 2"], correct: 0, explanation: "'Finding Nemo' זכה בפרס סרט האנימציה הטוב ביותר בטקס של 2004." }
+    ]
+  }
+  ,
+  {
+    title: "מלחמות ישראל",
+    clues: [
+      { value: 100, prompt: "באיזו שנה התחילה מלחמת העצמאות?", options: ["1945","1947","1948","1950"], correct: 2, explanation: "מלחמת העצמאות התחילה בשנת 1948 עם הקמת המדינה." },
+      { value: 200, prompt: "מה שם המלחמה שהתחילה בשנת 1967?", options: ["מלחמת ששת הימים","מלחמת יום הכיפורים","מלחמת סיני","מלחמת לבנון"], correct: 0, explanation: "מלחמת ששת הימים (1967) הייתה קונפליקט קצר אך משמעותי." },
+      { value: 300, prompt: "באיזו שנה התחילה מלחמת יום הכיפורים?", options: ["1970","1972","1973","1975"], correct: 2, explanation: "מלחמת יום הכיפורים התחילה בשנת 1973 בנובמבר." },
+      { value: 400, prompt: "מה שם המלחמה בשנת 1982?", options: ["מלחמת לבנון הראשונה","מלחמת לבנון השנייה","מלחמת גולן","מלחמת סיני"], correct: 0, explanation: "מלחמת לבנון הראשונה התחילה בשנת 1982." },
+      { value: 500, prompt: "כמה ימים נמשכה מלחמת ששת הימים?", options: ["3 ימים","4 ימים","6 ימים","10 ימים"], correct: 2, explanation: "מלחמת ששת הימים נמשכה בדיוק שישה ימים (5-10 ביוני 1967)." }
     ]
   }
 ];
@@ -290,15 +291,7 @@ const splashAddBtn = document.getElementById('splash-add-player');
 const splashPlayersList = document.getElementById('splash-players');
 const startGameBtn = document.getElementById('start-game');
 
-// Intro screen elements
-const intro = document.getElementById('intro');
-const introContinue = document.getElementById('intro-continue');
-
-// Initially: show intro, hide splash
-if (intro) {
-  intro.setAttribute('aria-hidden','false');
-  intro.style.display = 'flex';
-}
+// Initially: hide splash until players are setup
 if (splash) {
   splash.setAttribute('aria-hidden','true');
   splash.style.display = 'none';
@@ -341,16 +334,7 @@ startGameBtn.addEventListener('click', () => {
   renderPlayers();
 });
 
-// Intro continue handler: hide intro, show splash and play a little confetti
-introContinue.addEventListener('click', () => {
-  intro.setAttribute('aria-hidden','true');
-  intro.style.display = 'none';
-  splash.setAttribute('aria-hidden','false');
-  splash.style.display = 'flex';
-  createConfetti();
-});
 
-intro.addEventListener('keydown', (e) => { if (e.key === 'Enter') introContinue.click(); });
 
 addPlayerBtn.addEventListener("click", () => addPlayer(playerNameInput.value));
 playerNameInput.addEventListener("keydown", (e) => {
